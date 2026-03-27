@@ -1,0 +1,19 @@
+base_url = "https://ooru.space"
+title = "Public community and third spaces in India"
+description = "Directory of public community spaces across India"
+compile_sass = false
+minify_html = true
+
+[markdown]
+
+[[taxonomies]]
+name = "states"
+feed = false
+
+[[taxonomies]]
+name = "cities"
+feed = false
+
+[[taxonomies]]
+name = "categories"
+feed = false
