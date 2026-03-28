@@ -96,8 +96,10 @@ export default function DirectoryClient({ coffeeFarms, teaFarms }: Props) {
 
   const sidebarFooter = (
     <div className="sidebar-footer">
-      <p>Made with Love by Arjun Aditya</p>
-      <a href="/get-your-website" className="website-cta">You need a website? →</a>
+      <a href="/get-your-website" className="sidebar-cta">
+        <span className="sidebar-cta-label">Need a website?</span>
+        <span className="sidebar-cta-sub">Custom solutions by Gray Cup →</span>
+      </a>
     </div>
   )
 
@@ -152,6 +154,10 @@ export default function DirectoryClient({ coffeeFarms, teaFarms }: Props) {
           </>
         ) : (
           <>
+            <div className="sidebar-desc">
+              <p>A community directory of coffee and tea estates across India. Browse farms, explore the map, and <a href="/submit">add your own</a>.</p>
+            </div>
+
             <div className="sidebar-top">
               <div className="tabs">
                 <button className={`tab-btn${tab === 'coffee' ? ' active' : ''}`} onClick={() => handleTabChange('coffee')}>Coffee</button>
@@ -270,6 +276,7 @@ export default function DirectoryClient({ coffeeFarms, teaFarms }: Props) {
               </div>
             </div>
 
+            <div className="results-list-wrap">
             <div className="results-list">
               {filtered.map(farm => {
                 const tags = tab === 'coffee'
@@ -310,6 +317,7 @@ export default function DirectoryClient({ coffeeFarms, teaFarms }: Props) {
                   No farms match your filters.
                 </p>
               )}
+            </div>
             </div>
 
             {sidebarFooter}
