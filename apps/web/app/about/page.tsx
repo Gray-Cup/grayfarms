@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'About — Gray Farms',
-  description: 'About the Gray Farms directory of coffee and tea estates in India.',
+  description: 'Gray Farms is an open directory of coffee and tea estates across India, built by Gray Cup.',
 }
 
 export default function AboutPage() {
@@ -11,36 +11,61 @@ export default function AboutPage() {
         <h2>About Gray Farms</h2>
 
         <p className="about-lead">
-          Gray Farms is an open, community-driven directory of coffee and tea estates across India.
-          Our goal is to make it easy to discover farms, learn about their growing practices, and
-          connect growers with curious people.
+          Gray Farms is an open directory of coffee and tea estates across India —
+          built to make it easy to discover farms, understand their growing practices,
+          and connect growers with curious people.
         </p>
 
         <div className="about-section">
           <h3>What we track</h3>
           <p>
-            Each listing includes the farm&apos;s location, elevation, varieties grown, processing
-            methods, certifications, and a direct link to their website where available. All data
-            is pinned on an interactive map so you can explore by region.
+            Each listing includes the farm&apos;s name, location, elevation, varieties grown,
+            processing methods, certifications, and a direct link to their website where
+            available. All farms are pinned on an interactive map so you can explore by region.
           </p>
         </div>
 
         <div className="about-section">
           <h3>How it works</h3>
           <p>
-            Anyone can submit a farm using the <a href="/">Submit a Farm</a> button on the directory.
-            Submissions are reviewed and, once approved, added to the directory via a pull request on
-            GitHub. The data lives in plain JSON files — fully open and auditable.
+            Anyone can submit a farm using the Submit button on the directory. Submissions
+            are reviewed and, once approved, added via a pull request on GitHub. The data
+            lives in plain JSON files — fully open and auditable.
           </p>
         </div>
 
         <div className="about-section">
-          <h3>Who built this</h3>
+          <h3>Built by Gray Cup</h3>
           <p>
-            Gray Farms was built with love by <strong>Arjun Aditya</strong> at{' '}
-            <a href="https://graycup.com" target="_blank" rel="noopener noreferrer">Gray Cup</a>.
-            Gray Cup builds fast, purposeful websites and digital products for businesses, farms,
-            and creators.
+            Gray Farms is a project by{' '}
+            <a href="https://graycup.org" target="_blank" rel="noopener noreferrer">Gray Cup</a>
+            {' '}— Gray Cup Enterprises Private Limited, an Indian company focused on sourcing,
+            trading, and exporting tea, coffee, and spices. Gray Farms is our way of giving
+            back to the community that grows what we love.
+          </p>
+        </div>
+
+        <div className="about-section">
+          <h3>Who made this</h3>
+          <p>
+            Gray Farms was designed and built by{' '}
+            <a href="https://arjunaditya.xyz" target="_blank" rel="noopener noreferrer">Arjun Aditya</a>,
+            Director at Gray Cup, with interests in nature, code, and design.
+          </p>
+        </div>
+
+        <div className="about-section">
+          <h3>Legal details</h3>
+          <p>
+            <strong>Gray Cup Enterprises Private Limited</strong><br />
+            FF122, Rodeo Drive Mall, GT Road, TDI City,<br />
+            Kundli, Sonipat, Haryana — 131030, India
+          </p>
+          <p>
+            CIN: U47211DL2025PTC457808<br />
+            GST: 06AAMCG4985H1Z4<br />
+            Email:{' '}
+            <a href="mailto:graycup.enterprises@gmail.com">graycup.enterprises@gmail.com</a>
           </p>
         </div>
 
@@ -55,9 +80,9 @@ export default function AboutPage() {
         </div>
 
         <div className="about-cta">
-          <p>Need a website for your farm or business?</p>
-          <a href="/get-your-website" className="about-cta-link">
-            Get your website built by Gray Cup →
+          <p>Want to learn more about Gray Cup?</p>
+          <a href="https://graycup.org/about" target="_blank" rel="noopener noreferrer" className="about-cta-link">
+            Visit graycup.org →
           </a>
         </div>
       </div>
