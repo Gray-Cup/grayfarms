@@ -4,7 +4,6 @@ static/spaces.csv
 
 # Next.js
 apps/*/.next/
-apps/*/public/
 apps/*/dist/
 
 # Node
