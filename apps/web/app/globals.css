@@ -217,7 +217,7 @@ header {
   cursor: pointer;
   transition: box-shadow 0.2s ease;
 }
-.graycup-btn:hover { opacity: 0.88; color: #fff !important; }
+.graycup-btn:hover { color: #fff !important; }
 .graycup-btn:visited { color: #fff !important; }
 .graycup-btn:active {
   transform: translateY(2px);
