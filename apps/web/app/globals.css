@@ -449,6 +449,16 @@ header {
   line-height: 1.55;
 }
 .sidebar-desc a { color: var(--app-color-primary); }
+.inline-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--app-color-primary);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 /* ── Sidebar CTA ─────────────────────────────────────────── */
 .sidebar-cta {
@@ -456,19 +466,19 @@ header {
   flex-direction: column;
   gap: 0.15rem;
   padding: 0.75rem 1rem;
-  background: #797979;
+  background: #f4f4f4;
   border-radius: 8px;
   text-decoration: none;
 }
-.sidebar-cta:hover { background: #424242; }
+.sidebar-cta:hover { background: #ebebeb; }
 .sidebar-cta-label {
   font-size: var(--text-small);
   font-weight: 600;
-  color: #fff;
+  color: #111;
 }
 .sidebar-cta-sub {
   font-size: var(--text-xsmall);
-  color: rgba(255, 255, 255, 0.8);
+  color: #555;
 }
 
 /* ── Contact info (Turnstile-gated) ─────────────────────── */

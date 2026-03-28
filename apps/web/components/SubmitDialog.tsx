@@ -57,8 +57,15 @@ function CheckGroup({
   )
 }
 
-export default function SubmitDialog() {
-  const [open, setOpen] = useState(false)
+interface Props {
+  open?: boolean
+  onOpenChange?: (v: boolean) => void
+}
+
+export default function SubmitDialog({ open: externalOpen, onOpenChange: externalSetOpen }: Props = {}) {
+  const isControlled = externalOpen !== undefined
+  const [internalOpen, setInternalOpen] = useState(false)
+  const open = isControlled ? externalOpen! : internalOpen
   const [farmType, setFarmType] = useState<FarmType>('coffee')
   const [form, setForm] = useState(emptyForm)
   const [varieties, setVarieties] = useState<string[]>([])
@@ -112,11 +119,19 @@ export default function SubmitDialog() {
     }
   }
 
+  const handleOpenChange = (v: boolean) => {
+    if (!isControlled) setInternalOpen(v)
+    externalSetOpen?.(v)
+    if (!v) reset()
+  }
+
   return (
-    <Dialog open={open} onOpenChange={v => { setOpen(v); if (!v) reset() }}>
-      <button className="submit-btn" onClick={() => setOpen(true)}>
-        Submit a farm
-      </button>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      {!isControlled && (
+        <button className="submit-btn" onClick={() => handleOpenChange(true)}>
+          Submit a farm
+        </button>
+      )}
 
       <DialogContent className="sm:max-w-lg max-h-[90vh] flex flex-col gap-0 p-0 overflow-hidden">
         {status === 'success' ? (

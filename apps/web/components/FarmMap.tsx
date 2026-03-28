@@ -200,7 +200,7 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
 
       prevSelectedRef.current = selectedId
     })
-  }, [selectedId, selectedFarm])
+  }, [selectedId, selectedFarm, mapReady])
 
   return (
     <>

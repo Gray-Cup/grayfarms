@@ -1,6 +1,13 @@
 import path from 'path'
 import fs from 'fs'
 import type { CoffeeFarmData, TeaFarmData } from '@farms/db'
+import { toSlug } from './slug'
+
+export { toSlug }
+
+export function stripContact<T extends CoffeeFarmData | TeaFarmData>(farms: T[]): T[] {
+  return farms.map(({ phone: _p, email: _e, ...rest }) => rest as T)
+}
 
 // Data files live at the repo root: /data/coffee-farms.json and /data/tea-farms.json
 // At build time Next.js reads these from the filesystem.
@@ -22,4 +29,9 @@ export function getCoffeeFarms(): CoffeeFarmData[] {
 
 export function getTeaFarms(): TeaFarmData[] {
   return readDataFile<TeaFarmData>('tea-farms.json').filter(f => f.active)
+}
+
+export function findFarmBySlug(slug: string): CoffeeFarmData | TeaFarmData | null {
+  const all = [...getCoffeeFarms(), ...getTeaFarms()]
+  return all.find(f => toSlug(f.name) === slug) ?? null
 }
