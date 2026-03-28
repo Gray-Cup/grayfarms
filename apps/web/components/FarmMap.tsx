@@ -207,7 +207,6 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
       <link
         rel="stylesheet"
         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        // @ts-expect-error crossOrigin not typed on link
         crossOrigin=""
       />
       <div ref={containerRef} id="map" />
