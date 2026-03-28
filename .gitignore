@@ -1,3 +1,23 @@
-public/
+# Zola (legacy)
 content/spaces/
 static/spaces.csv
+
+# Next.js
+apps/*/.next/
+apps/*/public/
+apps/*/dist/
+
+# Node
+node_modules/
+.pnpm-store/
+
+# Turbo
+.turbo/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
