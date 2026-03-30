@@ -1011,8 +1011,8 @@ html.dark .theme-toggle-btn:hover { background: #161616; color: #ececec; }
 }
 
 .btn-submit {
-  background: var(--app-color-primary);
-  color: white;
+  background: #111;
+  color: #fff;
   border: none;
   padding: 0.55rem 1.75rem;
   font-size: var(--text-regular);
@@ -1044,7 +1044,7 @@ html.dark .theme-toggle-btn:hover { background: #161616; color: #ececec; }
 html.dark a { color: var(--app-color-primary); }
 html.dark a:visited { color: #888; }
 
-html.dark .btn-submit { background: #e5e5e5; color: #111; }
+html.dark .btn-submit { background: transparent; color: #fff; border: 1px solid #fff; }
 html.dark .btn-submit:hover { opacity: 0.85; }
 
 html.dark input[type="checkbox"] {
