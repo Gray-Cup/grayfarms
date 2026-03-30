@@ -15,7 +15,8 @@ export default function Navbar() {
           {/* LEFT */}
           <div className="navbar-left">
             <Link href="/" className="navbar-brand">
-              <Image src="/grayfarms.svg" alt="Gray Farms" width={28} height={16} draggable={false} priority />
+              <Image src="/grayfarms.svg" alt="Gray Farms" width={32} height={18} draggable={false} priority />
+              Gray Farms
             </Link>
             <span className="navbar-sep" aria-hidden>|</span>
             <nav className="navbar-links">
