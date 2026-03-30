@@ -36,12 +36,28 @@ const hiStyle = (farm: AnyFarm): L.CircleMarkerOptions => ({
   className: 'farm-dot farm-dot--selected',
 })
 
+const TILES = {
+  default: {
+    url: 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
+    options: { subdomains: 'abcd', attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/">CARTO</a>' },
+    labels: 'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
+  },
+  satellite: {
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    options: { attribution: '&copy; <a href="https://www.esri.com/">Esri</a>, Maxar, Earthstar Geographics' },
+    labels: 'https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png',
+  },
+}
+
 export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: Props) {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<L.Map | null>(null)
   const markersRef = useRef<Map<string, { marker: L.CircleMarker; farm: AnyFarm }>>(new Map())
   const prevSelectedRef = useRef<string | null>(null)
+  const baseTileRef = useRef<L.TileLayer | null>(null)
+  const labelsTileRef = useRef<L.TileLayer | null>(null)
   const [mapReady, setMapReady] = useState(false)
+  const [satellite, setSatellite] = useState(false)
 
   // Initialise the Leaflet map once
   useEffect(() => {
@@ -64,20 +80,15 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
       mapRef.current = map
       setMapReady(true)
 
-      L.tileLayer(
-        'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
-        {
-          attribution:
-            '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/">CARTO</a>',
-          subdomains: 'abcd',
-        }
+      baseTileRef.current = L.tileLayer(
+        TILES.default.url, TILES.default.options
       ).addTo(map)
 
-      const addLabels = () =>
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
-          subdomains: 'abcd',
-          pane: 'shadowPane',
-        }).addTo(map)
+      const addLabels = () => {
+        labelsTileRef.current = L.tileLayer(
+          TILES.default.labels, { subdomains: 'abcd', pane: 'shadowPane' }
+        ).addTo(map)
+      }
 
       fetch('/india.geojson')
         .then(r => r.json())
@@ -202,6 +213,22 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
     })
   }, [selectedId, selectedFarm, mapReady])
 
+  // Swap tile layers when satellite toggle changes
+  useEffect(() => {
+    if (!mapRef.current) return
+    import('leaflet').then(L => {
+      const map = mapRef.current!
+      const tiles = satellite ? TILES.satellite : TILES.default
+      if (baseTileRef.current) { baseTileRef.current.remove() }
+      if (labelsTileRef.current) { labelsTileRef.current.remove() }
+      baseTileRef.current = L.tileLayer(tiles.url, tiles.options).addTo(map)
+      labelsTileRef.current = L.tileLayer(tiles.labels, {
+        subdomains: 'abcd',
+        pane: 'shadowPane',
+      }).addTo(map)
+    })
+  }, [satellite])
+
   return (
     <>
       <link
@@ -210,6 +237,13 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
         crossOrigin=""
       />
       <div ref={containerRef} id="map" />
+      <button
+        className={`map-style-toggle${satellite ? ' map-style-toggle--active' : ''}`}
+        onClick={() => setSatellite(s => !s)}
+        title={satellite ? 'Switch to map view' : 'Switch to satellite view'}
+      >
+        {satellite ? '🗺 Map' : '🛰 Satellite'}
+      </button>
     </>
   )
 }
