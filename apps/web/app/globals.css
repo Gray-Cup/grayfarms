@@ -1093,6 +1093,25 @@ html.dark .map-style-toggle:hover { background: #161616; }
 html.dark .map-style-toggle--active { background: #ececec; color: #0a0a0a; border-color: #ececec; }
 html.dark .map-style-toggle--active:hover { background: #ccc; }
 
+html.dark .leaflet-popup-content-wrapper,
+html.dark .leaflet-popup-tip {
+  background: #111;
+  color: #ececec;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+html.dark .leaflet-popup-content-wrapper { border: 1px solid #222; }
+html.dark .leaflet-bar a,
+html.dark .leaflet-bar a:hover {
+  background: #111;
+  border-bottom-color: #222;
+  color: #ececec;
+}
+html.dark .leaflet-control-attribution {
+  background: rgba(10,10,10,0.8) !important;
+  color: #555 !important;
+}
+html.dark .leaflet-control-attribution a { color: #666 !important; }
+
 html.dark .about-lead { color: #aaa; }
 html.dark .about-section h3 { color: #ececec; }
 html.dark .about-section p { color: #aaa; }

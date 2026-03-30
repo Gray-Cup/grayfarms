@@ -37,10 +37,15 @@ const hiStyle = (farm: AnyFarm): L.CircleMarkerOptions => ({
 })
 
 const TILES = {
-  default: {
+  light: {
     url: 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
     options: { subdomains: 'abcd', attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/">CARTO</a>' },
     labels: 'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
+  },
+  dark: {
+    url: 'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',
+    options: { subdomains: 'abcd', attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/">CARTO</a>' },
+    labels: 'https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png',
   },
   satellite: {
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
@@ -56,8 +61,21 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
   const prevSelectedRef = useRef<string | null>(null)
   const baseTileRef = useRef<L.TileLayer | null>(null)
   const labelsTileRef = useRef<L.TileLayer | null>(null)
+  const overlayRef = useRef<L.Polygon | null>(null)
   const [mapReady, setMapReady] = useState(false)
   const [satellite, setSatellite] = useState(false)
+  const [darkMode, setDarkMode] = useState(() =>
+    typeof document !== 'undefined' && document.documentElement.classList.contains('dark')
+  )
+
+  // Watch html.dark class for theme changes
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setDarkMode(document.documentElement.classList.contains('dark'))
+    })
+    observer.observe(document.documentElement, { attributeFilter: ['class'] })
+    return () => observer.disconnect()
+  }, [])
 
   // Initialise the Leaflet map once
   useEffect(() => {
@@ -80,13 +98,14 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
       mapRef.current = map
       setMapReady(true)
 
-      baseTileRef.current = L.tileLayer(
-        TILES.default.url, TILES.default.options
-      ).addTo(map)
+      const isDark = document.documentElement.classList.contains('dark')
+      const initTiles = isDark ? TILES.dark : TILES.light
+      baseTileRef.current = L.tileLayer(initTiles.url, initTiles.options).addTo(map)
 
       const addLabels = () => {
+        const tiles = document.documentElement.classList.contains('dark') ? TILES.dark : TILES.light
         labelsTileRef.current = L.tileLayer(
-          TILES.default.labels, { subdomains: 'abcd', pane: 'shadowPane' }
+          tiles.labels, { subdomains: 'abcd', pane: 'shadowPane' }
         ).addTo(map)
       }
 
@@ -98,10 +117,12 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
             india.geometry.type === 'Polygon'
               ? [india.geometry.coordinates]
               : india.geometry.coordinates
-          L.polygon(
+          const isDarkNow = document.documentElement.classList.contains('dark')
+          const poly = L.polygon(
             [world, ...polys.map((p: number[][][]) => p[0].map(c => [c[1], c[0]] as [number, number]))],
-            { color: 'none', fillColor: '#ddd', fillOpacity: 0.6, interactive: false }
+            { color: 'none', fillColor: isDarkNow ? '#111' : '#ddd', fillOpacity: 0.6, interactive: false }
           ).addTo(map)
+          overlayRef.current = poly
           addLabels()
         })
         .catch(addLabels)
@@ -112,6 +133,7 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
       mapRef.current?.remove()
       mapRef.current = null
       markersRef.current.clear()
+      overlayRef.current = null
     }
   }, [])
 
@@ -213,12 +235,12 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
     })
   }, [selectedId, selectedFarm, mapReady])
 
-  // Swap tile layers when satellite toggle changes
+  // Swap tile layers when satellite or dark mode changes
   useEffect(() => {
     if (!mapRef.current) return
     import('leaflet').then(L => {
       const map = mapRef.current!
-      const tiles = satellite ? TILES.satellite : TILES.default
+      const tiles = satellite ? TILES.satellite : (darkMode ? TILES.dark : TILES.light)
       if (baseTileRef.current) { baseTileRef.current.remove() }
       if (labelsTileRef.current) { labelsTileRef.current.remove() }
       baseTileRef.current = L.tileLayer(tiles.url, tiles.options).addTo(map)
@@ -226,8 +248,13 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
         subdomains: 'abcd',
         pane: 'shadowPane',
       }).addTo(map)
+
+      // Update the outside-India overlay fill
+      if (overlayRef.current) {
+        overlayRef.current.setStyle({ fillColor: darkMode ? '#111' : '#ddd' })
+      }
     })
-  }, [satellite])
+  }, [satellite, darkMode])
 
   return (
     <>
