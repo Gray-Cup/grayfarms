@@ -19,24 +19,24 @@ export default function GetYourWebsitePage() {
           </a>{' '}
           and let&apos;s build something together.
         </p>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+        <div className="pages-grid" style={{ marginTop: '1rem' }}>
           <a
             href="https://graycup.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-submit"
-            style={{ display: 'inline-block', textDecoration: 'none' }}
+            className="pages-card"
           >
-            Visit Gray Cup →
+            <span className="pages-card-label">Visit Gray Cup →</span>
+            <span className="pages-card-desc">See our work and portfolio at graycup.com</span>
           </a>
           <a
             href="https://wa.me/918527914317?text=I%20would%20like%20to%20enquire%20about%20websites%20you%20make%20and%20I%20got%20your%20number%20from%20grayfarms"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-submit"
-            style={{ display: 'inline-block', textDecoration: 'none', background: '#25D366', color: '#fff' }}
+            className="pages-card"
           >
-            Send a Message on WhatsApp
+            <span className="pages-card-label">Send a Message on WhatsApp</span>
+            <span className="pages-card-desc">Chat directly at +91 85279 14317</span>
           </a>
         </div>
       </div>
