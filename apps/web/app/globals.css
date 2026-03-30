@@ -161,6 +161,9 @@ header {
 }
 
 .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 500;
   font-size: 1.22rem;
   color: #111 !important;
