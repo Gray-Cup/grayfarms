@@ -84,6 +84,28 @@
 }
 
 html.dark {
+  /* shadcn/ui CSS variable overrides */
+  --background: 0 0% 4%;
+  --foreground: 0 0% 93%;
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 93%;
+  --popover: 0 0% 5%;
+  --popover-foreground: 0 0% 93%;
+  --primary: 0 0% 93%;
+  --primary-foreground: 0 0% 4%;
+  --secondary: 0 0% 9%;
+  --secondary-foreground: 0 0% 93%;
+  --muted: 0 0% 9%;
+  --muted-foreground: 0 0% 40%;
+  --accent: 0 0% 9%;
+  --accent-foreground: 0 0% 93%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 12%;
+  --input: 0 0% 9%;
+  --ring: 0 0% 83%;
+
+  /* app tokens */
   --app-color-primary: #ececec;
   --app-color-muted: #555;
   --app-color-hover: #161616;
@@ -1092,6 +1114,9 @@ html.dark .map-style-toggle { background: #0d0d0d; border-color: #2a2a2a; color:
 html.dark .map-style-toggle:hover { background: #161616; }
 html.dark .map-style-toggle--active { background: #ececec; color: #0a0a0a; border-color: #ececec; }
 html.dark .map-style-toggle--active:hover { background: #ccc; }
+
+html.dark #map { background: #0a0a0a !important; }
+html.dark .leaflet-container { background: #0a0a0a !important; }
 
 html.dark .leaflet-popup-content-wrapper,
 html.dark .leaflet-popup-tip {
