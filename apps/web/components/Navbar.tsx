@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import SubmitDialog from './SubmitDialog'
 
@@ -13,7 +14,9 @@ export default function Navbar() {
         <div className="navbar-inner">
           {/* LEFT */}
           <div className="navbar-left">
-            <Link href="/" className="navbar-brand">Gray Farms</Link>
+            <Link href="/" className="navbar-brand">
+              <Image src="/grayfarms.svg" alt="Gray Farms" width={100} height={28} draggable={false} priority />
+            </Link>
             <span className="navbar-sep" aria-hidden>|</span>
             <nav className="navbar-links">
               <Link href="/pages">Pages</Link>
