@@ -19,15 +19,26 @@ export default function GetYourWebsitePage() {
           </a>{' '}
           and let&apos;s build something together.
         </p>
-        <a
-          href="https://graycup.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-submit"
-          style={{ display: 'inline-block', textDecoration: 'none' }}
-        >
-          Visit Gray Cup →
-        </a>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+          <a
+            href="https://graycup.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-submit"
+            style={{ display: 'inline-block', textDecoration: 'none', background: '#111', color: '#fff' }}
+          >
+            Visit Gray Cup →
+          </a>
+          <a
+            href="https://wa.me/918527914317?text=I%20would%20like%20to%20enquire%20about%20websites%20you%20make%20and%20I%20got%20your%20number%20from%20grayfarms"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-submit"
+            style={{ display: 'inline-block', textDecoration: 'none', background: '#25D366', color: '#fff' }}
+          >
+            Send a Message on WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   )
