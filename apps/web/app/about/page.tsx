@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer'
+
 export const metadata = {
   title: 'About — Gray Farms',
   description: 'Gray Farms is an open directory of coffee and tea estates across India, built by Gray Cup.',
@@ -85,6 +87,7 @@ export default function AboutPage() {
             Visit graycup.org →
           </a>
         </div>
+        <Footer />
       </div>
     </div>
   )

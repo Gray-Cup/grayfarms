@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getCoffeeFarms, getTeaFarms, stripContact, toSlug } from '@/lib/farms'
 import { REGIONS, getRegion } from '@/lib/regions'
+import Footer from '@/components/Footer'
 
 export const dynamic = 'force-static'
 
@@ -97,6 +98,7 @@ export default async function RegionPage({ params }: { params: Promise<{ region:
             )}
           </div>
         )}
+        <Footer />
       </div>
     </div>
   )

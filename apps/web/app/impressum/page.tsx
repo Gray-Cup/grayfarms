@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer'
+
 export const metadata = {
   title: 'Impressum — Gray Farms',
 }
@@ -38,6 +40,7 @@ export default function ImpressumPage() {
             for follow-up if needed). No data is sold or shared with third parties.
           </p>
         </div>
+        <Footer />
       </div>
     </div>
   )

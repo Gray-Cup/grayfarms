@@ -188,6 +188,44 @@ header {
 .navbar-links a:visited { color: #555; }
 .navbar-links a:hover { background: #f4f4f4; color: #111; }
 
+.navbar-pages-wrap {
+  position: relative;
+}
+.navbar-pages-btn {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.navbar-pages-btn:hover { background: #f4f4f4; color: #111; }
+.navbar-pages-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  min-width: 180px;
+  padding: 0.35rem;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+}
+.navbar-pages-dropdown a {
+  font-size: 0.875rem;
+  color: #444;
+  padding: 0.45rem 0.65rem;
+  border-radius: 5px;
+  display: block;
+}
+.navbar-pages-dropdown a:visited { color: #444; }
+.navbar-pages-dropdown a:hover { background: #f4f4f4; color: #111; }
+
 .navbar-right {
   display: flex;
   align-items: center;
@@ -746,6 +784,104 @@ header {
   filter: drop-shadow(0 0 6px rgba(0,0,0,0.5));
 }
 
+
+/* ── Sitemap page ────────────────────────────────────────── */
+.sitemap-section {
+  margin-bottom: 2rem;
+}
+.sitemap-section h2 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--app-color-border);
+}
+.sitemap-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.sitemap-section li {
+  font-size: var(--text-small);
+}
+.sitemap-section a {
+  color: #444;
+}
+.sitemap-section a:hover { color: #111; }
+
+/* ── Pages grid ──────────────────────────────────────────── */
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.pages-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--app-color-border);
+  border-radius: 8px;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.pages-card:visited { color: inherit; }
+.pages-card:hover {
+  border-color: #bbb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  color: inherit;
+}
+.pages-card-label {
+  font-weight: 600;
+  font-size: var(--text-base);
+  color: #111;
+}
+.pages-card-desc {
+  font-size: var(--text-small);
+  color: var(--app-color-muted);
+  line-height: 1.5;
+}
+
+/* ── Site footer ─────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--app-color-border);
+  padding: 1.5rem 1.5rem;
+  margin-top: 3rem;
+}
+.site-footer-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: var(--text-small);
+}
+.site-footer-brand {
+  font-weight: 500;
+  color: #111;
+}
+.site-footer-links {
+  display: flex;
+  gap: 0.25rem;
+  flex: 1;
+}
+.site-footer-links a {
+  color: #555;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+.site-footer-links a:visited { color: #555; }
+.site-footer-links a:hover { color: #111; }
+.site-footer-copy {
+  color: var(--app-color-muted);
+  margin-left: auto;
+}
+.site-footer-copy a { color: var(--app-color-muted); }
+.site-footer-copy a:hover { color: #111; }
 
 /* ── Submit form page ────────────────────────────────────── */
 .form-page {

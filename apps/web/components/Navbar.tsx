@@ -16,8 +16,9 @@ export default function Navbar() {
             <Link href="/" className="navbar-brand">Gray Farms</Link>
             <span className="navbar-sep" aria-hidden>|</span>
             <nav className="navbar-links">
-              <Link href="/about">About</Link>
-              <Link href="/impressum">Impressum</Link>
+              <Link href="/pages">Pages</Link>
+              <Link href="/blog">Blog</Link>
+              <Link href="/sitemap">Sitemap</Link>
             </nav>
           </div>
 
@@ -51,8 +52,9 @@ export default function Navbar() {
         <aside className={`mobile-drawer${menuOpen ? ' open' : ''}`}>
           <button className="mobile-close" onClick={() => setMenuOpen(false)} aria-label="Close menu">✕</button>
           <nav className="mobile-nav">
-            <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
-            <Link href="/impressum" onClick={() => setMenuOpen(false)}>Impressum</Link>
+            <Link href="/pages" onClick={() => setMenuOpen(false)}>Pages</Link>
+            <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+            <Link href="/sitemap" onClick={() => setMenuOpen(false)}>Sitemap</Link>
             <SubmitDialog />
           </nav>
           <div className="mobile-actions">
