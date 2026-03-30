@@ -19,6 +19,8 @@ export default function Navbar() {
               <Link href="/pages">Pages</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/sitemap">Sitemap</Link>
+              <Link href="/about">About</Link>
+              <Link href="/impressum">Impressum</Link>
             </nav>
           </div>
 
@@ -55,6 +57,8 @@ export default function Navbar() {
             <Link href="/pages" onClick={() => setMenuOpen(false)}>Pages</Link>
             <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
             <Link href="/sitemap" onClick={() => setMenuOpen(false)}>Sitemap</Link>
+            <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link href="/impressum" onClick={() => setMenuOpen(false)}>Impressum</Link>
             <SubmitDialog />
           </nav>
           <div className="mobile-actions">
