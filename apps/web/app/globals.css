@@ -1120,7 +1120,7 @@ html.dark .map-style-toggle--active:hover { background: #ccc; }
 
 html.dark #map { background: #0a0a0a !important; }
 html.dark .leaflet-container { background: #0a0a0a !important; }
-html.dark .leaflet-shadow-pane { filter: contrast(6) brightness(1.15); }
+html.dark #map:not(.map--satellite) .leaflet-shadow-pane { filter: contrast(6) brightness(1.15); }
 
 html.dark .leaflet-popup-content-wrapper,
 html.dark .leaflet-popup-tip {
