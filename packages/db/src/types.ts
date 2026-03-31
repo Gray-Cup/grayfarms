@@ -69,6 +69,7 @@ export interface Submission {
 }
 
 // Data-file shapes (what lives in data/coffee-farms.json etc.)
+// Contact info (phone/email) is stored in Supabase farm_contacts, not in JSON.
 export interface CoffeeFarmData {
   id: string
   name: string
@@ -79,8 +80,6 @@ export interface CoffeeFarmData {
   lat: number | null
   lng: number | null
   url: string | null
-  phone?: string | null
-  email?: string | null
   description: string | null
   elevation_meters: number | null
   varieties: string[]
@@ -99,12 +98,18 @@ export interface TeaFarmData {
   lat: number | null
   lng: number | null
   url: string | null
-  phone?: string | null
-  email?: string | null
   description: string | null
   elevation_meters: number | null
   tea_types: string[]
   processing_methods: string[]
   certifications: string[]
   active: boolean
+}
+
+export interface FarmContact {
+  farm_id: string
+  farm_type: FarmType
+  phone: string | null
+  email: string | null
+  updated_at: string
 }

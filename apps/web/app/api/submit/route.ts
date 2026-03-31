@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createSupabaseClient } from '@farms/db'
+import { createSupabaseServiceClient } from '@farms/db'
 
 export async function POST(req: NextRequest) {
   try {
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid farm_type' }, { status: 400 })
     }
 
-    const supabase = createSupabaseClient()
+    const supabase = createSupabaseServiceClient()
 
     const { error } = await supabase.from('submissions').insert({
       farm_type,

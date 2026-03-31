@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { getCoffeeFarms, getTeaFarms, stripContact, toSlug } from '@/lib/farms'
+import { getCoffeeFarms, getTeaFarms, toSlug } from '@/lib/farms'
 import { REGIONS, getRegion } from '@/lib/regions'
 import Footer from '@/components/Footer'
 
@@ -24,12 +24,8 @@ export default async function RegionPage({ params }: { params: Promise<{ region:
   const region = getRegion(slug)
   if (!region) notFound()
 
-  const coffeeFarms = stripContact(getCoffeeFarms()).filter(f =>
-    region.states.includes(f.state)
-  )
-  const teaFarms = stripContact(getTeaFarms()).filter(f =>
-    region.states.includes(f.state)
-  )
+  const coffeeFarms = getCoffeeFarms().filter(f => region.states.includes(f.state))
+  const teaFarms = getTeaFarms().filter(f => region.states.includes(f.state))
 
   const total = coffeeFarms.length + teaFarms.length
 

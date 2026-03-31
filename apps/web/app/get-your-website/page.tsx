@@ -14,20 +14,20 @@ export default function GetYourWebsitePage() {
         </p>
         <p style={{ fontSize: 'var(--text-small)', lineHeight: 1.7, marginBottom: '2rem' }}>
           Reach out at{' '}
-          <a href="https://graycup.com" target="_blank" rel="noopener noreferrer">
-            graycup.com
+          <a href="https://graycup.org" target="_blank" rel="noopener noreferrer">
+            graycup.org
           </a>{' '}
           and let&apos;s build something together.
         </p>
         <div className="pages-grid" style={{ marginTop: '1rem' }}>
           <a
-            href="https://graycup.com"
+            href="https://graycup.org"
             target="_blank"
             rel="noopener noreferrer"
             className="pages-card"
           >
             <span className="pages-card-label">Visit Gray Cup →</span>
-            <span className="pages-card-desc">See our work and portfolio at graycup.com</span>
+            <span className="pages-card-desc">See our work and portfolio at graycup.org</span>
           </a>
           <a
             href="https://wa.me/918527914317?text=I%20would%20like%20to%20enquire%20about%20websites%20you%20make%20and%20I%20got%20your%20number%20from%20gray%20farms"

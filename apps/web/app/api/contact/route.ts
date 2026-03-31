@@ -1,22 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import path from 'path'
-import fs from 'fs'
+import { createSupabaseServiceClient } from '@farms/db'
 
 const TURNSTILE_SECRET = process.env.TURNSTILE_SECRET_KEY
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function findFarm(farmId: string): any | null {
-  const repoRoot = path.resolve(process.cwd(), '../../')
-  for (const filename of ['coffee-farms.json', 'tea-farms.json']) {
-    const filePath = path.join(repoRoot, 'data', filename)
-    if (!fs.existsSync(filePath)) continue
-    const farms = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const farm = farms.find((f: any) => f.id === farmId)
-    if (farm) return farm
-  }
-  return null
-}
 
 export async function POST(req: NextRequest) {
   if (!TURNSTILE_SECRET) {
@@ -52,13 +37,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Verification failed' }, { status: 403 })
   }
 
-  const farm = findFarm(farmId)
-  if (!farm) {
-    return NextResponse.json({ error: 'Farm not found' }, { status: 404 })
-  }
+  const supabase = createSupabaseServiceClient()
+  const { data } = await supabase
+    .from('farm_contacts')
+    .select('phone, email')
+    .eq('farm_id', farmId)
+    .single()
 
   return NextResponse.json({
-    phone: farm.phone ?? null,
-    email: farm.email ?? null,
+    phone: data?.phone ?? null,
+    email: data?.email ?? null,
   })
 }

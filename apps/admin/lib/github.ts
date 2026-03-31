@@ -1,5 +1,5 @@
 import { Octokit } from '@octokit/rest'
-import type { Submission } from '@farms/db'
+import type { Submission, CoffeeFarmData, TeaFarmData } from '@farms/db'
 
 const OWNER = process.env.GITHUB_OWNER!
 const REPO  = process.env.GITHUB_REPO!
@@ -111,6 +111,108 @@ export async function createFarmPullRequest(submission: Submission): Promise<str
     repo: REPO,
     title: `Add ${submission.farm_type} farm: ${submission.name}`,
     body,
+    head: branchName,
+    base: BASE_BRANCH,
+  })
+
+  return pr.html_url
+}
+
+async function getFileAndFarms(farmType: 'coffee' | 'tea') {
+  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
+  const dataFile = getDataFilePath(farmType)
+
+  const { data: fileData } = await octokit.repos.getContent({
+    owner: OWNER, repo: REPO, path: dataFile, ref: BASE_BRANCH,
+  })
+
+  if (Array.isArray(fileData) || fileData.type !== 'file') {
+    throw new Error(`Expected a file at ${dataFile}`)
+  }
+
+  const farms: object[] = JSON.parse(Buffer.from(fileData.content, 'base64').toString('utf-8'))
+  return { octokit, dataFile, fileData, farms }
+}
+
+export async function updateFarm(
+  farmType: 'coffee' | 'tea',
+  farmId: string,
+  updates: Partial<CoffeeFarmData & TeaFarmData>
+): Promise<void> {
+  const { octokit, dataFile, fileData, farms } = await getFileAndFarms(farmType)
+
+  const idx = (farms as Array<{ id: string }>).findIndex(f => f.id === farmId)
+  if (idx === -1) throw new Error(`Farm ${farmId} not found in ${dataFile}`)
+
+  farms[idx] = { ...farms[idx], ...updates }
+  const updatedJson = JSON.stringify(farms, null, 2) + '\n'
+
+  await octokit.repos.createOrUpdateFileContents({
+    owner: OWNER, repo: REPO, path: dataFile,
+    message: `Update ${farmType} farm: ${(updates as { name?: string }).name ?? farmId}`,
+    content: Buffer.from(updatedJson).toString('base64'),
+    sha: fileData.sha,
+    branch: BASE_BRANCH,
+  })
+}
+
+export async function deleteFarm(
+  farmType: 'coffee' | 'tea',
+  farmId: string,
+  farmName: string
+): Promise<void> {
+  const { octokit, dataFile, fileData, farms } = await getFileAndFarms(farmType)
+
+  const filtered = (farms as Array<{ id: string }>).filter(f => f.id !== farmId)
+  if (filtered.length === farms.length) throw new Error(`Farm ${farmId} not found`)
+
+  const updatedJson = JSON.stringify(filtered, null, 2) + '\n'
+
+  await octokit.repos.createOrUpdateFileContents({
+    owner: OWNER, repo: REPO, path: dataFile,
+    message: `Remove ${farmType} farm: ${farmName}`,
+    content: Buffer.from(updatedJson).toString('base64'),
+    sha: fileData.sha,
+    branch: BASE_BRANCH,
+  })
+}
+
+export async function deleteFarmPullRequest(
+  farmType: 'coffee' | 'tea',
+  farmId: string,
+  farmName: string
+): Promise<string> {
+  const { octokit, dataFile, fileData, farms } = await getFileAndFarms(farmType)
+
+  const filtered = (farms as Array<{ id: string }>).filter(f => f.id !== farmId)
+  if (filtered.length === farms.length) throw new Error(`Farm ${farmId} not found`)
+
+  const updatedJson = JSON.stringify(filtered, null, 2) + '\n'
+
+  const { data: mainRef } = await octokit.git.getRef({
+    owner: OWNER, repo: REPO, ref: `heads/${BASE_BRANCH}`,
+  })
+
+  const branchName = `remove-farm/${farmType}/${slugify(farmName)}-${farmId.slice(0, 8)}`
+
+  await octokit.git.createRef({
+    owner: OWNER, repo: REPO,
+    ref: `refs/heads/${branchName}`,
+    sha: mainRef.object.sha,
+  })
+
+  await octokit.repos.createOrUpdateFileContents({
+    owner: OWNER, repo: REPO, path: dataFile,
+    message: `Remove ${farmType} farm: ${farmName}`,
+    content: Buffer.from(updatedJson).toString('base64'),
+    sha: fileData.sha,
+    branch: branchName,
+  })
+
+  const { data: pr } = await octokit.pulls.create({
+    owner: OWNER, repo: REPO,
+    title: `Remove ${farmType} farm: ${farmName}`,
+    body: `Removes **${farmName}** (ID: \`${farmId}\`) from ${dataFile}.\n\n*Initiated from admin panel.*`,
     head: branchName,
     base: BASE_BRANCH,
   })

@@ -1,62 +1,46 @@
-'use client'
+import { redirect } from 'next/navigation'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
-import { useState } from 'react'
-import { createBrowserClient } from '@supabase/ssr'
-import { useRouter } from 'next/navigation'
+interface Props {
+  searchParams: Promise<{ error?: string }>
+}
 
-export default function LoginPage() {
-  const router = useRouter()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
+export default async function LoginPage({ searchParams }: Props) {
+  const { error } = await searchParams
 
-  const supabase = createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  )
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
-
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
-
+  async function login(formData: FormData) {
+    'use server'
+    const supabase = await createSupabaseServerClient()
+    const { error } = await supabase.auth.signInWithPassword({
+      email: formData.get('email') as string,
+      password: formData.get('password') as string,
+    })
     if (error) {
-      setError(error.message)
-      setLoading(false)
-    } else {
-      router.push('/')
-      router.refresh()
+      redirect('/login?error=' + encodeURIComponent(error.message))
     }
+    redirect('/')
   }
 
   return (
     <div className="login-page">
       <div className="login-card">
         <h2>Admin sign in</h2>
-        <form onSubmit={handleSubmit}>
+        <form action={login}>
           <div className="form-group">
             <label>Email</label>
-            <input
-              type="email" required autoComplete="email"
-              value={email} onChange={e => setEmail(e.target.value)}
-            />
+            <input type="email" name="email" required autoComplete="email" />
           </div>
           <div className="form-group">
             <label>Password</label>
-            <input
-              type="password" required autoComplete="current-password"
-              value={password} onChange={e => setPassword(e.target.value)}
-            />
+            <input type="password" name="password" required autoComplete="current-password" />
           </div>
-          {error && <p className="login-error">{error}</p>}
+          {error && <p className="login-error">{decodeURIComponent(error)}</p>}
           <button
-            type="submit" className="btn btn-primary"
-            disabled={loading} style={{ width: '100%', marginTop: '0.5rem' }}
+            type="submit"
+            className="btn btn-primary"
+            style={{ width: '100%', marginTop: '0.5rem' }}
           >
-            {loading ? 'Signing in…' : 'Sign in'}
+            Sign in
           </button>
         </form>
       </div>

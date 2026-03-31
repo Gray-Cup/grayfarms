@@ -5,10 +5,6 @@ import { toSlug } from './slug'
 
 export { toSlug }
 
-export function stripContact<T extends CoffeeFarmData | TeaFarmData>(farms: T[]): T[] {
-  return farms.map(({ phone: _p, email: _e, ...rest }) => rest as T)
-}
-
 // Data files live at the repo root: /data/coffee-farms.json and /data/tea-farms.json
 // At build time Next.js reads these from the filesystem.
 // When a PR adding a new farm is merged, Vercel rebuilds the site from the updated JSON.

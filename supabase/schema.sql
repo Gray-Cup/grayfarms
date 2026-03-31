@@ -118,6 +118,21 @@ CREATE INDEX IF NOT EXISTS submissions_farm_type_idx ON submissions (farm_type);
 CREATE INDEX IF NOT EXISTS submissions_submitted_idx ON submissions (submitted_at DESC);
 
 -- ============================================================
+-- Farm Contacts — phone/email stored here, never in the JSON repo
+-- ============================================================
+CREATE TABLE IF NOT EXISTS farm_contacts (
+  farm_id     TEXT PRIMARY KEY,
+  farm_type   TEXT NOT NULL CHECK (farm_type IN ('coffee', 'tea')),
+  phone       TEXT,
+  email       TEXT,
+  updated_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TRIGGER farm_contacts_updated_at
+  BEFORE UPDATE ON farm_contacts
+  FOR EACH ROW EXECUTE FUNCTION set_updated_at();
+
+-- ============================================================
 -- Row Level Security
 -- ============================================================
 
@@ -136,6 +151,10 @@ ALTER TABLE submissions ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "public_insert_submissions" ON submissions
   FOR INSERT WITH CHECK (true);
 -- Admins use the service role key which bypasses RLS.
+
+-- Farm contacts: service role only (no public access)
+ALTER TABLE farm_contacts ENABLE ROW LEVEL SECURITY;
+-- No public policies — all access via service role key only.
 
 -- ============================================================
 -- updated_at trigger helper

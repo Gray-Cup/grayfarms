@@ -49,6 +49,9 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
           <div className="nav-section">Overview</div>
           <NavLink href="/">Dashboard</NavLink>
 
+          <div className="nav-section">Directory</div>
+          <NavLink href="/farms">Farms</NavLink>
+
           <div className="nav-section">Reviews</div>
           <NavLink href="/submissions">Submissions</NavLink>
         </nav>

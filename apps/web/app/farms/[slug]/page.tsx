@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { getCoffeeFarms, getTeaFarms, findFarmBySlug, toSlug, stripContact } from '@/lib/farms'
+import { getCoffeeFarms, getTeaFarms, findFarmBySlug, toSlug } from '@/lib/farms'
 import DirectoryClient from '@/components/DirectoryClient'
 
 export function generateStaticParams() {
@@ -24,8 +24,8 @@ export default async function FarmPage({ params }: { params: Promise<{ slug: str
 
   return (
     <DirectoryClient
-      coffeeFarms={stripContact(getCoffeeFarms())}
-      teaFarms={stripContact(getTeaFarms())}
+      coffeeFarms={getCoffeeFarms()}
+      teaFarms={getTeaFarms()}
       initialFarmId={farm.id}
     />
   )

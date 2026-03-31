@@ -1,4 +1,4 @@
-import { getCoffeeFarms, getTeaFarms, stripContact } from '@/lib/farms'
+import { getCoffeeFarms, getTeaFarms } from '@/lib/farms'
 import DirectoryClient from '@/components/DirectoryClient'
 
 // This page is statically generated at build time from the JSON data files.
@@ -8,8 +8,8 @@ export const dynamic = 'force-static'
 export default function HomePage() {
   return (
     <DirectoryClient
-      coffeeFarms={stripContact(getCoffeeFarms())}
-      teaFarms={stripContact(getTeaFarms())}
+      coffeeFarms={getCoffeeFarms()}
+      teaFarms={getTeaFarms()}
     />
   )
 }
