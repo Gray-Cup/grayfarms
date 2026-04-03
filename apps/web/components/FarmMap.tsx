@@ -97,8 +97,8 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
         .then(states => {
           L.geoJSON(states, {
             style: {
-              color: '#444',
-              weight: 1.5,
+              color: '#707070',
+              weight: 1,
               opacity: 0.7,
               fill: false,
             },
