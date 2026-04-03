@@ -48,8 +48,8 @@ const TILES = {
     labels: 'https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png',
   },
   satellite: {
-    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    options: { attribution: '&copy; <a href="https://www.esri.com/">Esri</a>, Maxar, Earthstar Geographics' },
+    url: 'https://mt{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+    options: { subdomains: '0123', attribution: '&copy; Google', maxNativeZoom: 20, maxZoom: 20 },
     labels: 'https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png',
   },
 }
