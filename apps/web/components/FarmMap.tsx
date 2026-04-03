@@ -265,11 +265,6 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
 
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        crossOrigin=""
-      />
       <div ref={containerRef} id="map" className={satellite ? 'map--satellite' : ''} />
       <button
         className={`map-style-toggle${satellite ? ' map-style-toggle--active' : ''}`}
