@@ -90,6 +90,22 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
           overlayRef.current = poly
         })
         .catch(() => {})
+
+      fetch('/india-states.geojson')
+        .then(r => r.json())
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .then(states => {
+          L.geoJSON(states, {
+            style: {
+              color: '#444',
+              weight: 1.5,
+              opacity: 0.7,
+              fill: false,
+            },
+            interactive: false,
+          }).addTo(map)
+        })
+        .catch(() => {})
     })
 
     return () => {
