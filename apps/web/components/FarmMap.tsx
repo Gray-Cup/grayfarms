@@ -251,7 +251,10 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect }: P
 
       // Update the outside-India overlay fill
       if (overlayRef.current) {
-        overlayRef.current.setStyle({ fillColor: darkMode ? '#111' : '#ddd' })
+        overlayRef.current.setStyle({
+          fillColor: satellite ? '#000' : (darkMode ? '#111' : '#ddd'),
+          fillOpacity: satellite ? 0.45 : 0.6,
+        })
       }
     })
   }, [satellite, darkMode])
