@@ -17,6 +17,25 @@
     "active": true
   },
   {
+
+  "id": "f1a2b3c4-0002-0000-0000-000000000004",
+  "name": "Lithanro Coffee",
+  "state": "Nagaland",
+  "city": "Mokokchung",
+  "address": "Chumoukedima / Mokokchung District, Nagaland (Farm estate ~112 km from Kohima, off NH-2)",
+  "pincode": "798601",
+  "lat": 26.3220,
+  "lng": 94.5135,
+  "url": "https://www.instagram.com/lithanrocoffee",
+  "description": "Nagaland's only farm-to-cup institution, founded by Searon Yanthan in 2021. Operates a washing mill and curing unit on the family estate, sources from ~200 farmers across the state, and runs Juro Coffee House — a live roastery café on NH-2.",
+  "elevation_meters": 900,
+  "varieties": ["Arabica", "Robusta"],
+  "processing_methods": ["Washed", "Natural"],
+  "certifications": [],
+  "active": true
+
+}
+  {
     "id": "f1a2b3c4-0002-0000-0000-000000000002",
     "name": "Balmaadi Estate",
     "state": "Tamil Nadu",
