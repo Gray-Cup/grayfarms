@@ -24,7 +24,19 @@ interface Props {
   initialFarmId?: string
 }
 
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
 export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }: Props) {
+  const [shuffledCoffee] = useState(() => shuffle(coffeeFarms))
+  const [shuffledTea] = useState(() => shuffle(teaFarms))
+
   const initialTab: FarmType = initialFarmId
     ? (coffeeFarms.some(f => f.id === initialFarmId) ? 'coffee' : 'tea')
     : 'coffee'
@@ -37,11 +49,11 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
   const [filterOpen, setFilterOpen] = useState(false)
   const [submitOpen, setSubmitOpen] = useState(false)
 
-  const farms = tab === 'coffee' ? coffeeFarms : teaFarms
+  const farms = tab === 'coffee' ? shuffledCoffee : shuffledTea
 
   const allFarms: AnyFarm[] = useMemo(
-    () => [...coffeeFarms, ...teaFarms],
-    [coffeeFarms, teaFarms]
+    () => [...shuffledCoffee, ...shuffledTea],
+    [shuffledCoffee, shuffledTea]
   )
   const selectedFarm = selectedId ? allFarms.find(f => f.id === selectedId) ?? null : null
 
@@ -53,12 +65,12 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
   const allTags = useMemo(() => {
     const tags = new Set<string>()
     if (tab === 'coffee') {
-      coffeeFarms.forEach(f => { f.varieties.forEach(v => tags.add(v)); f.certifications.forEach(c => tags.add(c)) })
+      shuffledCoffee.forEach(f => { f.varieties.forEach(v => tags.add(v)); f.certifications.forEach(c => tags.add(c)) })
     } else {
-      teaFarms.forEach(f => { f.tea_types.forEach(t => tags.add(t)); f.certifications.forEach(c => tags.add(c)) })
+      shuffledTea.forEach(f => { f.tea_types.forEach(t => tags.add(t)); f.certifications.forEach(c => tags.add(c)) })
     }
     return [...tags].sort()
-  }, [tab, coffeeFarms, teaFarms])
+  }, [tab, shuffledCoffee, shuffledTea])
 
   const activeFilterCount = selectedStates.length + selectedTags.length
 
