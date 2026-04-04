@@ -505,9 +505,9 @@
   "url": "https://www.instagram.com/lithanrocoffee",
   "description": "Nagaland's only farm-to-cup institution, founded by Searon Yanthan in 2021. Operates a washing mill and curing unit on the family estate, sources from ~200 farmers across the state, and runs Juro Coffee House — a live roastery café on NH-2.",
   "elevation_meters": 1400,
-  "varieties": ["Arabica", "Robusta"],
+  "varieties": ["Robusta"],
   "processing_methods": ["Washed", "Natural"],
-  "certifications": [],
+  "certifications": ["FSSAI"],
   "active": true
 
 }
