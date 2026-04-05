@@ -1510,24 +1510,6 @@
     "active": true
   },
   {
-    "id": "farm-042",
-    "name": "Varadymullai Estate",
-    "state": "Tamil Nadu",
-    "city": "Tamil Nadu",
-    "address": "Tamil Nadu",
-    "pincode": null,
-    "lat": 11.0000,
-    "lng": 77.5000,
-    "url": null,
-    "instagram": null,
-    "description": "Founded in 1945, Varadymullai Estate spans a vast 2,000 acres, with roughly 400 acres dedicated to coffee cultivation. The scale of the operation reflects a long tradition of large-scale estate farming in Tamil Nadu, where the estate has maintained its productivity and land-use balance over eight decades of continuous coffee growing.",
-    "elevation_meters": 1000,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
-    "certifications": [],
-    "active": true
-  },
-  {
     "id": "farm-043",
     "name": "Yelliemadaloo Estate",
     "state": "Karnataka",
@@ -1578,6 +1560,24 @@
     "elevation_meters": 1450,
     "varieties": ["Arabica", "SL9", "SL5B", "Gesha", "Yellow Bourbon"],
     "processing_methods": ["Natural", "Washed", "Honey", "Carbonic Maceration"],
+    "certifications": [],
+    "active": true
+  },
+  {
+    "id": "farm-042",
+    "name": "Varadymullai Estate",
+    "state": "Tamil Nadu",
+    "city": "Siruvani",
+    "address": "Siruvani, Coimbatore District, Tamil Nadu",
+    "pincode": "641114",
+    "lat": 10.9200,
+    "lng": 76.8500,
+    "url": null,
+    "instagram": null,
+    "description": "Varadymullai Estate is located in the Western Ghats of Tamil Nadu near Siruvani, in the foothills of the Nilgiri Mountains. Established in 1945 under the Siruvani Group (incorporated as The Bhavani Tea & Produce Co. Ltd), the estate spans 2,000 acres of which close to 400 acres are dedicated to coffee cultivation. Tributaries of the Bhavani River run through the property, supporting a diverse range of crops including cardamom, tea, and pepper alongside coffee. Each step of the harvesting and curing process takes place on the estate, ensuring full traceability and quality control from cherry to green bean.",
+    "elevation_meters": null,
+    "varieties": ["Arabica", "S9", "Chandragiri", "San Ramon"],
+    "processing_methods": ["Washed"],
     "certifications": [],
     "active": true
   }
