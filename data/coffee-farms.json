@@ -9,11 +9,19 @@
     "lat": 12.2833,
     "lng": 75.6667,
     "url": "https://www.tatacoffeegrand.com",
-    "description": "One of the largest integrated coffee plantation companies in Asia. Operates across Coorg and Chikmagalur with washed and natural processing facilities.",
+    "description": "One of the largest integrated coffee plantation companies in Asia. Operates across Coorg and Chikmagalur with washed and natural processing facilities. test pr",
     "elevation_meters": 1050,
-    "varieties": ["Arabica", "Robusta"],
-    "processing_methods": ["Washed", "Natural"],
-    "certifications": ["Rainforest Alliance"],
+    "varieties": [
+      "Arabica",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "Rainforest Alliance"
+    ],
     "active": true
   },
   {
@@ -23,14 +31,22 @@
     "city": "Nilgiris",
     "address": "Gudalur, Nilgiris District, Tamil Nadu",
     "pincode": "643212",
-    "lat": 11.4930,
-    "lng": 76.5070,
+    "lat": 11.493,
+    "lng": 76.507,
     "url": null,
     "description": "A high-altitude biodynamic estate producing single-origin Arabica with a distinct fruity profile. One of the few biodynamic coffee estates in India.",
     "elevation_meters": 1700,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Honey"],
-    "certifications": ["Organic", "Fair Trade"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey"
+    ],
+    "certifications": [
+      "Organic",
+      "Fair Trade"
+    ],
     "active": true
   },
   {
@@ -40,14 +56,23 @@
     "city": "Araku",
     "address": "Araku Valley, Alluri Sitharama Raju District",
     "pincode": "531149",
-    "lat": 18.3260,
-    "lng": 82.8750,
+    "lat": 18.326,
+    "lng": 82.875,
     "url": "https://www.arakunaturalcoffee.com",
     "description": "Tribal cooperative farming collectives in the Eastern Ghats. Araku coffee has won international recognition and is exported to specialty roasters across Europe.",
     "elevation_meters": 900,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural", "Anaerobic"],
-    "certifications": ["Organic", "Fair Trade"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Anaerobic"
+    ],
+    "certifications": [
+      "Organic",
+      "Fair Trade"
+    ],
     "active": true
   },
   {
@@ -62,8 +87,14 @@
     "url": "https://ainmane.com",
     "description": "A family-run heritage estate in the Western Ghats producing fine Arabica. Known for meticulous hand-picking and micro-lot processing.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica", "Kents"],
-    "processing_methods": ["Washed", "Honey"],
+    "varieties": [
+      "Arabica",
+      "Kents"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey"
+    ],
     "certifications": [],
     "active": true
   },
@@ -79,9 +110,17 @@
     "url": null,
     "description": "A growers' cooperative spanning hundreds of small farms in Wayanad. Produces both Arabica and Robusta with direct trade relationships with specialty buyers.",
     "elevation_meters": 750,
-    "varieties": ["Arabica", "Robusta"],
-    "processing_methods": ["Washed", "Natural"],
-    "certifications": ["Organic"],
+    "varieties": [
+      "Arabica",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "Organic"
+    ],
     "active": true
   },
   {
@@ -96,9 +135,18 @@
     "url": null,
     "description": "An 18-acre subtropical highland plantation in Jeypore growing Robusta and Arabica S795 under natural canopy. Notes of dark chocolate, earthy undertones, and mild spice.",
     "elevation_meters": 1025,
-    "varieties": ["Robusta", "Arabica S795"],
-    "processing_methods": ["Washed", "Natural"],
-    "certifications": ["FSSAI", "APEDA"],
+    "varieties": [
+      "Robusta",
+      "Arabica S795"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA"
+    ],
     "active": true
   },
   {
@@ -113,9 +161,18 @@
     "url": null,
     "description": "A 24-acre estate in Sunabeda at elevations of 1000–1200m. Produces Arabica Catuai and Robusta with washed and honey processing, yielding floral, peach, and caramel notes.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica Catuai", "Robusta"],
-    "processing_methods": ["Washed", "Honey"],
-    "certifications": ["FSSAI", "Organic India"],
+    "varieties": [
+      "Arabica Catuai",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey"
+    ],
+    "certifications": [
+      "FSSAI",
+      "Organic India"
+    ],
     "active": true
   },
   {
@@ -130,9 +187,16 @@
     "url": null,
     "description": "A 15-acre Robusta plantation in Narayanpatna, established 2001. Natural and washed processing yields dark berry, tobacco, and woody flavour notes.",
     "elevation_meters": 900,
-    "varieties": ["Robusta"],
-    "processing_methods": ["Natural", "Washed"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Natural",
+      "Washed"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -147,9 +211,21 @@
     "url": null,
     "description": "One of Koraput's largest and oldest estates at 32 acres, established 1995. Grows three varieties with full-spectrum processing, delivering milk chocolate, hazelnut, and stone fruit.",
     "elevation_meters": 1175,
-    "varieties": ["Arabica S795", "Arabica Catimor", "Robusta"],
-    "processing_methods": ["Washed", "Natural", "Honey"],
-    "certifications": ["FSSAI", "APEDA", "ISO 22000"],
+    "varieties": [
+      "Arabica S795",
+      "Arabica Catimor",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Honey"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA",
+      "ISO 22000"
+    ],
     "active": true
   },
   {
@@ -164,9 +240,16 @@
     "url": null,
     "description": "An 11-acre washed-processing plantation in Koraput Town, specialising in Robusta and Arabica S795. Cup profile is cocoa-forward with a nutty, clean finish.",
     "elevation_meters": 965,
-    "varieties": ["Robusta", "Arabica S795"],
-    "processing_methods": ["Washed"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Robusta",
+      "Arabica S795"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -181,9 +264,19 @@
     "url": null,
     "description": "A high-altitude 28-acre estate in Pottangi, one of Odisha's premium specialty farms. Arabica SLN 9 and Catuai yield jasmine, citrus zest, and golden raisin with Rainforest Alliance certification.",
     "elevation_meters": 1275,
-    "varieties": ["Arabica SLN 9", "Arabica Catuai"],
-    "processing_methods": ["Washed", "Honey"],
-    "certifications": ["FSSAI", "APEDA", "Rainforest Alliance"],
+    "varieties": [
+      "Arabica SLN 9",
+      "Arabica Catuai"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA",
+      "Rainforest Alliance"
+    ],
     "active": true
   },
   {
@@ -198,9 +291,17 @@
     "url": null,
     "description": "A 20-acre estate in Similiguda producing Robusta and Arabica S795 with natural and washed methods. Flavour profile features dark chocolate, dried fig, and warm spice.",
     "elevation_meters": 1000,
-    "varieties": ["Robusta", "Arabica S795"],
-    "processing_methods": ["Natural", "Washed"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Robusta",
+      "Arabica S795"
+    ],
+    "processing_methods": [
+      "Natural",
+      "Washed"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -215,9 +316,18 @@
     "url": null,
     "description": "A 14-acre export-ready plantation in Lamtaput growing Arabica Catimor and Robusta. Pulped natural and washed processing yields red apple, brown sugar, and mild citrus notes.",
     "elevation_meters": 1050,
-    "varieties": ["Arabica Catimor", "Robusta"],
-    "processing_methods": ["Washed", "Pulped Natural"],
-    "certifications": ["FSSAI", "APEDA"],
+    "varieties": [
+      "Arabica Catimor",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Pulped Natural"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA"
+    ],
     "active": true
   },
   {
@@ -232,9 +342,15 @@
     "url": null,
     "description": "A 9-acre Robusta garden in Jeypore using natural processing. Produces a full-bodied cup with blackberry and earthy character.",
     "elevation_meters": 945,
-    "varieties": ["Robusta"],
-    "processing_methods": ["Natural"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Natural"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -249,9 +365,18 @@
     "url": null,
     "description": "A 16-acre export-certified plantation in Koraput growing Robusta and Arabica S795. Washed and natural processing yields cocoa nib, dried plum, and a smooth finish.",
     "elevation_meters": 1000,
-    "varieties": ["Robusta", "Arabica S795"],
-    "processing_methods": ["Washed", "Natural"],
-    "certifications": ["FSSAI", "APEDA"],
+    "varieties": [
+      "Robusta",
+      "Arabica S795"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA"
+    ],
     "active": true
   },
   {
@@ -266,9 +391,22 @@
     "url": null,
     "description": "One of Koraput's oldest and most decorated estates at 35 acres, established 1992. Multi-certified with full-spectrum processing, producing caramel, orange peel, and dark fruit.",
     "elevation_meters": 1125,
-    "varieties": ["Arabica S795", "Arabica SLN 9", "Robusta"],
-    "processing_methods": ["Washed", "Natural", "Honey"],
-    "certifications": ["FSSAI", "APEDA", "Organic India", "ISO 22000"],
+    "varieties": [
+      "Arabica S795",
+      "Arabica SLN 9",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Honey"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA",
+      "Organic India",
+      "ISO 22000"
+    ],
     "active": true
   },
   {
@@ -283,9 +421,20 @@
     "url": null,
     "description": "A 22-acre certified organic estate in Semiliguda producing Arabica S795 and Catuai. EU Organic and India Organic certified, with a clean, green apple and floral cup profile.",
     "elevation_meters": 1000,
-    "varieties": ["Arabica S795", "Arabica Catuai"],
-    "processing_methods": ["Washed", "Natural"],
-    "certifications": ["FSSAI", "APEDA", "India Organic", "EU Organic"],
+    "varieties": [
+      "Arabica S795",
+      "Arabica Catuai"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA",
+      "India Organic",
+      "EU Organic"
+    ],
     "active": true
   },
   {
@@ -300,9 +449,16 @@
     "url": null,
     "description": "A 13-acre Robusta plantation in Kotpad using natural and washed methods. Produces milk chocolate, tobacco, and earthy notes characteristic of the Koraput highlands.",
     "elevation_meters": 925,
-    "varieties": ["Robusta"],
-    "processing_methods": ["Natural", "Washed"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Natural",
+      "Washed"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -317,9 +473,18 @@
     "url": null,
     "description": "A 19-acre export-ready estate in Jeypore combining Arabica S795 and Robusta. Washed and honey processing brings out mango, honey, and soft spice notes.",
     "elevation_meters": 1025,
-    "varieties": ["Arabica S795", "Robusta"],
-    "processing_methods": ["Washed", "Honey"],
-    "certifications": ["FSSAI", "APEDA"],
+    "varieties": [
+      "Arabica S795",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA"
+    ],
     "active": true
   },
   {
@@ -334,9 +499,17 @@
     "url": null,
     "description": "A 17-acre plantation in Nabarangpur district growing Robusta and Arabica Catimor. Natural and washed processing produces ripe berry, dark chocolate, and woody flavours.",
     "elevation_meters": 900,
-    "varieties": ["Robusta", "Arabica Catimor"],
-    "processing_methods": ["Natural", "Washed"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Robusta",
+      "Arabica Catimor"
+    ],
+    "processing_methods": [
+      "Natural",
+      "Washed"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -351,9 +524,18 @@
     "url": null,
     "description": "A 21-acre export-ready estate in Similiguda growing Robusta and Arabica S795. Produces brown sugar, cocoa, and clean body through washed and natural processing.",
     "elevation_meters": 965,
-    "varieties": ["Robusta", "Arabica S795"],
-    "processing_methods": ["Washed", "Natural"],
-    "certifications": ["FSSAI", "APEDA"],
+    "varieties": [
+      "Robusta",
+      "Arabica S795"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA"
+    ],
     "active": true
   },
   {
@@ -368,9 +550,16 @@
     "url": null,
     "description": "A 14-acre estate in Koraput producing Arabica S795 and Robusta via washed processing. Cup profile is almond-forward with mild citrus and a sweet finish.",
     "elevation_meters": 1040,
-    "varieties": ["Arabica S795", "Robusta"],
-    "processing_methods": ["Washed"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Arabica S795",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -385,9 +574,19 @@
     "url": null,
     "description": "An 11-acre specialty farm in Pottangi at Odisha's highest coffee-growing elevations. Arabica SLN 9 and Catuai with Rainforest Alliance certification, delivering bergamot, peach tea, and honey crisp.",
     "elevation_meters": 1300,
-    "varieties": ["Arabica SLN 9", "Arabica Catuai"],
-    "processing_methods": ["Washed", "Honey"],
-    "certifications": ["FSSAI", "APEDA", "Rainforest Alliance"],
+    "varieties": [
+      "Arabica SLN 9",
+      "Arabica Catuai"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA",
+      "Rainforest Alliance"
+    ],
     "active": true
   },
   {
@@ -402,9 +601,16 @@
     "url": null,
     "description": "An 8-acre export-certified Robusta farm in Koraput using washed processing. Produces a clean, low-acidity cup with chocolate character.",
     "elevation_meters": 975,
-    "varieties": ["Robusta"],
-    "processing_methods": ["Washed"],
-    "certifications": ["FSSAI", "APEDA"],
+    "varieties": [
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA"
+    ],
     "active": true
   },
   {
@@ -419,9 +625,21 @@
     "url": null,
     "description": "A 26-acre multi-variety estate in Semiliguda established 1999. ISO 22000 certified, with washed, natural, and honey processing producing dark cherry, walnut, and caramel.",
     "elevation_meters": 1010,
-    "varieties": ["Arabica S795", "Arabica Catimor", "Robusta"],
-    "processing_methods": ["Washed", "Natural", "Honey"],
-    "certifications": ["FSSAI", "APEDA", "ISO 22000"],
+    "varieties": [
+      "Arabica S795",
+      "Arabica Catimor",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Honey"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA",
+      "ISO 22000"
+    ],
     "active": true
   },
   {
@@ -436,9 +654,17 @@
     "url": null,
     "description": "A 12-acre Robusta and Arabica S795 plantation in Boipariguda using natural and washed processing. Produces dried mango, earthy, and medium-bodied flavours.",
     "elevation_meters": 945,
-    "varieties": ["Robusta", "Arabica S795"],
-    "processing_methods": ["Natural", "Washed"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Robusta",
+      "Arabica S795"
+    ],
+    "processing_methods": [
+      "Natural",
+      "Washed"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -453,9 +679,18 @@
     "url": null,
     "description": "A 15-acre export-ready estate in Koraput producing Robusta and Arabica S795. Washed and honey processing yields toffee, light berry, and a smooth body.",
     "elevation_meters": 990,
-    "varieties": ["Robusta", "Arabica S795"],
-    "processing_methods": ["Washed", "Honey"],
-    "certifications": ["FSSAI", "APEDA"],
+    "varieties": [
+      "Robusta",
+      "Arabica S795"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA"
+    ],
     "active": true
   },
   {
@@ -470,9 +705,17 @@
     "url": null,
     "description": "An 18-acre plantation in Narayanpatna growing Arabica S795 and Robusta. Washed and natural processing brings out hazelnut, dark chocolate, and earthy sweetness.",
     "elevation_meters": 970,
-    "varieties": ["Arabica S795", "Robusta"],
-    "processing_methods": ["Washed", "Natural"],
-    "certifications": ["FSSAI"],
+    "varieties": [
+      "Arabica S795",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
     "active": true
   },
   {
@@ -487,28 +730,45 @@
     "url": null,
     "description": "A 23-acre Organic India certified estate in Semiliguda growing three Arabica and Robusta varieties. Full-spectrum processing produces tropical fruit, jasmine, and soft acidity.",
     "elevation_meters": 1055,
-    "varieties": ["Arabica SLN 9", "Arabica S795", "Robusta"],
-    "processing_methods": ["Washed", "Honey", "Natural"],
-    "certifications": ["FSSAI", "APEDA", "Organic India"],
+    "varieties": [
+      "Arabica SLN 9",
+      "Arabica S795",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey",
+      "Natural"
+    ],
+    "certifications": [
+      "FSSAI",
+      "APEDA",
+      "Organic India"
+    ],
     "active": true
   },
-    {
-
-  "id": "0d000025-0000-0000-0000-000000000025",
-  "name": "Lithanro Coffee",
-  "state": "Nagaland",
-  "city": "Mokokchung",
-  "address": "Chumoukedima, Mokokchung District, Nagaland",
-  "pincode": "798601",
-  "lat": 26.3220,
-  "lng": 94.5135,
-  "url": "https://www.instagram.com/lithanrocoffee",
-  "description": "Nagaland's only farm-to-cup institution, founded by Searon Yanthan in 2021. Operates a washing mill and curing unit on the family estate, sources from ~200 farmers across the state, and runs Juro Coffee House — a live roastery café on NH-2.",
-  "elevation_meters": 1400,
-  "varieties": ["Robusta"],
-  "processing_methods": ["Washed", "Natural"],
-  "certifications": ["FSSAI"],
-  "active": true
-
-}
+  {
+    "id": "0d000025-0000-0000-0000-000000000025",
+    "name": "Lithanro Coffee",
+    "state": "Nagaland",
+    "city": "Mokokchung",
+    "address": "Chumoukedima, Mokokchung District, Nagaland",
+    "pincode": "798601",
+    "lat": 26.322,
+    "lng": 94.5135,
+    "url": "https://www.instagram.com/lithanrocoffee",
+    "description": "Nagaland's only farm-to-cup institution, founded by Searon Yanthan in 2021. Operates a washing mill and curing unit on the family estate, sources from ~200 farmers across the state, and runs Juro Coffee House — a live roastery café on NH-2.",
+    "elevation_meters": 1400,
+    "varieties": [
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "FSSAI"
+    ],
+    "active": true
+  }
 ]
