@@ -722,9 +722,26 @@ html.dark .theme-toggle-btn:hover { background: #161616; color: #ececec; }
   color: var(--app-color-muted);
 }
 
+.detail-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .detail-url {
   font-size: var(--text-small);
   display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.detail-instagram {
+  font-size: var(--text-small);
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--app-color-muted);
 }
 
 .detail-description {

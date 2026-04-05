@@ -158,11 +158,18 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
                   {selectedFarm.elevation_meters && <span className="detail-elev"> · {selectedFarm.elevation_meters}m</span>}
                 </div>
                 {selectedFarm.address && <p className="detail-address">{selectedFarm.address}</p>}
-                {selectedFarm.url && (
-                  <a href={selectedFarm.url} target="_blank" rel="noopener noreferrer" className="detail-url">
-                    Visit website →
-                  </a>
-                )}
+                <div className="detail-links">
+                  {selectedFarm.url && (
+                    <a href={selectedFarm.url} target="_blank" rel="noopener noreferrer" className="detail-url">
+                      {selectedFarm.url.replace(/^https?:\/\/(www\.)?/, '')}
+                    </a>
+                  )}
+                  {selectedFarm.instagram && (
+                    <a href={selectedFarm.instagram} target="_blank" rel="noopener noreferrer" className="detail-instagram">
+                      Instagram
+                    </a>
+                  )}
+                </div>
                 {selectedFarm.description && <p className="detail-description">{selectedFarm.description}</p>}
                 {selectedFarmTags.length > 0 && (
                   <div className="detail-section">
