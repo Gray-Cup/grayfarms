@@ -770,5 +770,28 @@
       "FSSAI"
     ],
     "active": true
+  },
+  {
+    "id": "735c5b12-2590-46e1-9397-fdef022ad3f4",
+    "name": "tester",
+    "state": "Test",
+    "city": "Test",
+    "address": "blah blah",
+    "pincode": null,
+    "lat": null,
+    "lng": null,
+    "url": null,
+    "description": "blah blah",
+    "elevation_meters": 1400,
+    "processing_methods": [
+      "Washed"
+    ],
+    "certifications": [
+      "Organic"
+    ],
+    "active": true,
+    "varieties": [
+      "Arabica"
+    ]
   }
 ]
