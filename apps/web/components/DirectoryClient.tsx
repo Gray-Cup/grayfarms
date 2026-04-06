@@ -348,16 +348,6 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
                           <span>{farm.city}, {farm.state}</span>
                           {farm.elevation_meters && <span>{farm.elevation_meters}m elev.</span>}
                         </div>
-                        {farm.address && (
-                          <div className="address">
-                            <span>{farm.address}</span>
-                            {farm.url && (
-                              <a href={farm.url} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>
-                                Website →
-                              </a>
-                            )}
-                          </div>
-                        )}
                         {farm.description && (
                           <p>{farm.description.slice(0, 120)}{farm.description.length > 120 ? '…' : ''}</p>
                         )}
