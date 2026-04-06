@@ -75,10 +75,10 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
   const activeFilterCount = selectedStates.length + selectedTags.length
 
   const filtered = useMemo(() => {
-    const q = search.toLowerCase()
-    return farms.filter(f => {
-      const text = `${f.name} ${f.city} ${f.state} ${f.description ?? ''}`.toLowerCase()
-      if (q && !text.includes(q)) return false
+    const q = search.toLowerCase().trim()
+    const matches = farms.filter(f => {
+      const name = f.name.toLowerCase()
+      if (q && !name.includes(q)) return false
       if (selectedStates.length && !selectedStates.includes(f.state)) return false
       if (selectedTags.length) {
         const farmTags = [
@@ -89,6 +89,14 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
         if (!selectedTags.some(t => farmTags.includes(t))) return false
       }
       return true
+    })
+    if (!q) return matches
+    return matches.sort((a, b) => {
+      const an = a.name.toLowerCase()
+      const bn = b.name.toLowerCase()
+      const aStarts = an.startsWith(q) ? 0 : 1
+      const bStarts = bn.startsWith(q) ? 0 : 1
+      return aStarts - bStarts
     })
   }, [farms, search, selectedStates, selectedTags])
 
