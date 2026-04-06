@@ -784,8 +784,17 @@
     "instagram": "https://www.instagram.com/sangameshwar_coffee",
     "description": "Perched at up to 1,650 metres in the mist-laden Biligiri Ranjan Hills — locally called the 'white hills' for the fog that blankets them year-round — Attikan Estate ranks among India's highest-grown coffee farms. Part of the Sangameshwar Coffee group, the estate cultivates Arabica under a canopy of Silver Oaks, figs, and citrus trees, sharing its terrain with elephants, bison, and over a hundred bird species. Three selective handpicking rounds each harvest ensure only ripe cherries are collected, followed by pulping, fermentation, washing, and sun-drying on raised beds before curing at Sangameshwar's own facility.",
     "elevation_meters": 1650,
-    "varieties": ["Selection 9", "Selection 795", "Cauvery", "Kent"],
-    "processing_methods": ["Washed", "Natural", "Anaerobic"],
+    "varieties": [
+      "Selection 9",
+      "Selection 795",
+      "Cauvery",
+      "Kent"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Anaerobic"
+    ],
     "certifications": [],
     "active": true
   },
@@ -802,9 +811,16 @@
     "instagram": "https://www.instagram.com/araku_collectives/",
     "description": "A collective of tribal smallholder farmers in the Eastern Ghats, operating under the guidance of US-based non-profit TechnoServe and supported by the Walmart Foundation. The programme, spanning nine mandals and over 3,500 farmers across 355 villages, provides agronomy training, post-harvest management, and market access to communities that have grown coffee in this region since the early 2000s. Arabica cherries from these hillside plots are sorted, pulped, and processed through a model prioritising transparency, fair pricing, and sustainable livelihoods for indigenous farming families.",
     "elevation_meters": 1000,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
-    "certifications": ["Organic"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [
+      "Organic"
+    ],
     "active": true
   },
   {
@@ -820,8 +836,17 @@
     "instagram": "https://www.instagram.com/anaikadu/",
     "description": "Anai Kadu — meaning 'elephant jungle' in Kodava — is a 50-acre shade-grown farm bordering the Devamachi Reserve Forest in South Coorg, run by third-generation planter Kurian George and his partner Nisha Thomas, who manages post-harvest processing. The estate, part of the larger Pottamkulam family holding since the late 1950s, grows primarily Robusta (CxR and heritage Peradeniya) alongside a small section of Arabica. The name also nods to their daughter Anaika. Wild visitors — elephants, tigers, panthers — are frequent, and the farm practises washed, natural, honey, and fermented-natural processing methods.",
     "elevation_meters": 900,
-    "varieties": ["Robusta CxR", "Robusta Peradeniya", "Arabica Selection 795"],
-    "processing_methods": ["Natural", "Washed", "Honey", "Fermented Natural"],
+    "varieties": [
+      "Robusta CxR",
+      "Robusta Peradeniya",
+      "Arabica Selection 795"
+    ],
+    "processing_methods": [
+      "Natural",
+      "Washed",
+      "Honey",
+      "Fermented Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -833,14 +858,23 @@
     "address": "Baba Budan Giri foothills, Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": "https://mgplantations.com",
     "instagram": null,
     "description": "Operated by the third generation of the Indavara family under MG Plantations — a name in Chikmagalur coffee since 1894 — Baarbara Estate sits at elevations ranging from 1,174 to 1,630 metres in the Western Ghats. Shade-grown Selection 795 Arabica thrives on steep hillsides rich in biodiversity, with tigers, barking deer, wild boars, and over a hundred bird species sharing the landscape. The estate holds UTZ and Rainforest Alliance certifications, and also cultivates black pepper as an intercrop. Carefully picked cherries are processed into washed and honey sun-dried lots.",
     "elevation_meters": 1400,
-    "varieties": ["Selection 795 Arabica"],
-    "processing_methods": ["Washed", "Honey", "Natural"],
-    "certifications": ["UTZ", "Rainforest Alliance"],
+    "varieties": [
+      "Selection 795 Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey",
+      "Natural"
+    ],
+    "certifications": [
+      "UTZ",
+      "Rainforest Alliance"
+    ],
     "active": true
   },
   {
@@ -851,13 +885,19 @@
     "address": "Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "A family-owned estate in Chikmagalur with a heritage stretching back more than a century, Basankhan Estate began its coffee journey cultivating traditional varieties like Kent and San Ramon. Situated within the picturesque hills of the Western Ghats, the farm has evolved its practices over generations while retaining its deep roots in the region's coffee culture.",
     "elevation_meters": 1100,
-    "varieties": ["Kent", "San Ramon", "Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Kent",
+      "San Ramon",
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -869,13 +909,18 @@
     "address": "Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "Set among the rolling hills of Chikmagalur, Bettadamalali Estate traces its coffee cultivation roots to traditional varieties such as Kent and San Ramon. The farm's history offers a window into the evolution of Indian coffee farming, from older heirloom plantings to contemporary specialty production in one of India's most celebrated growing regions.",
     "elevation_meters": 1100,
-    "varieties": ["Kent", "San Ramon"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Kent",
+      "San Ramon"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -892,8 +937,13 @@
     "instagram": null,
     "description": "Established in 1960 and managed by Faiz Moosakutty since 1990, Bibi Plantation is a 205-acre estate in Suntikoppa — a key hub in Coorg's coffee belt — set at 800 metres above sea level. Over 90% of the land is devoted to Arabica, making it one of the more focused single-variety estates in the region. The farm runs its own pulping house, drying patios, and nursery, allowing complete in-house control over processing quality from cherry to parchment.",
     "elevation_meters": 800,
-    "varieties": ["Arabica", "Robusta"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -905,13 +955,18 @@
     "address": "Western Ghats, Karnataka",
     "pincode": "577101",
     "lat": 12.9716,
-    "lng": 75.7160,
+    "lng": 75.716,
     "url": null,
     "instagram": null,
     "description": "A newer addition to the specialty coffee landscape, Bynekere Estate is tucked into a mist-draped valley in the Western Ghats at 1,200 metres above sea level. The farm's youth is balanced by its exceptional natural setting — consistent cloud cover and reliable rainfall provide the cool microclimate that young Arabica plants need to develop balanced, nuanced flavour profiles.",
     "elevation_meters": 1200,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -922,14 +977,19 @@
     "city": "Yercaud",
     "address": "Shevaroy Hills, Yercaud, Salem District, Tamil Nadu",
     "pincode": "636601",
-    "lat": 11.7670,
+    "lat": 11.767,
     "lng": 78.1891,
     "url": null,
     "instagram": null,
     "description": "One of seven estates under MSP Plantations, Cauvery Peak has been part of the Rajes family's coffee legacy since the 1920s. Now stewarded by the fourth and fifth generations of the family, the estate sits within the Shevaroy Hills — a microclimate known for its mild temperatures, morning mist, and fertile red loam soils. The long family tenure has allowed the farm to develop deep agronomic knowledge, translating into consistently well-grown Arabica.",
     "elevation_meters": 1400,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -946,8 +1006,12 @@
     "instagram": null,
     "description": "A pioneering centralised processing facility in the lofty Western Ghats of Tamil Nadu, the CWS represents a first in Indian specialty coffee — a single-origin roaster operating its own wet mill to control processing quality from cherry to green bean. By consolidating post-harvest work, the station allows partner smallholders to deliver freshly picked cherries for consistent, traceable washing and sorting under expert supervision.",
     "elevation_meters": null,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -958,14 +1022,21 @@
     "city": "Yercaud",
     "address": "Yercaud Loop Road, Shevaroy Hills, Salem District, Tamil Nadu",
     "pincode": "636601",
-    "lat": 11.7670,
+    "lat": 11.767,
     "lng": 78.1891,
     "url": null,
     "instagram": null,
     "description": "One of seven estates belonging to MSP Coffee, Gowri Estate is situated along the Yercaud Loop Road in the Shevaroy Hills at an elevation of 1,310–1,433 metres. Growing primarily Selection 9, 5A, and 5B Arabica varieties, the farm won the prestigious 'Best Arabica Coffee in India' award in 2017. Five generations of accumulated knowledge in this Tamil Nadu highland region inform every decision, from shade management and variety selection to harvest timing and processing.",
     "elevation_meters": 1370,
-    "varieties": ["Selection 9", "Selection 5A", "Selection 5B"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Selection 9",
+      "Selection 5A",
+      "Selection 5B"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -976,14 +1047,19 @@
     "city": "Chikmagalur",
     "address": "Chandra Drona (Baba Budangiri) Hills, Chikmagalur, Karnataka",
     "pincode": "577101",
-    "lat": 13.4000,
-    "lng": 75.5350,
+    "lat": 13.4,
+    "lng": 75.535,
     "url": "https://www.sangameshwar.com",
     "instagram": "https://www.instagram.com/sangameshwar_coffee",
     "description": "A member of the Sangameshwar Coffee group — the same collective behind the celebrated Attikan Estate — Gungegiri Estate was originally established by British brothers W.L. and C.S. in the Chandra Drona hills. The Baba Budangiri range, where this farm is situated, is the legendary birthplace of Indian coffee, lending Gungegiri both a rich historical context and some of Karnataka's most favourable growing conditions.",
     "elevation_meters": 1200,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1000,8 +1076,12 @@
     "instagram": null,
     "description": "Situated near Suntikoppa at just over 1,000 metres elevation, Hardoor Estate lies within the well-known coffee-growing corridor of Coorg. The area's heavy monsoon rainfall and moderate temperatures create favourable conditions for shade-grown Arabica, with the farm's manageable altitude contributing to a balanced, approachable cup character.",
     "elevation_meters": 1000,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1018,8 +1098,13 @@
     "instagram": null,
     "description": "Harley Estate is nestled in Sakleshpur, a highland zone in Hassan district famous for its dense forests, misty mornings, and thriving coffee and tea plantations. Surrounded by both coffee and tea farms, the estate benefits from this diverse agricultural neighbourhood, which maintains ecological balance and contributes to the flavour complexity of its Arabica cherries.",
     "elevation_meters": 900,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1031,13 +1116,18 @@
     "address": "Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "Hidden Falls Estate takes its name from a secluded waterfall tucked among large rock formations on the property — a natural feature that underlines the estate's rugged, forested character. The rocky terrain and natural water sources contribute to the farm's moisture retention and mineral-rich soil, while the surrounding forest provides shade and biodiversity.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1048,14 +1138,21 @@
     "city": "Chikmagalur",
     "address": "Chandradrona Mountain foothills, near Bhadra River, Chikmagalur, Karnataka",
     "pincode": "577101",
-    "lat": 13.4210,
+    "lat": 13.421,
     "lng": 75.5826,
     "url": null,
     "instagram": "https://www.instagram.com/hipplafarms/",
     "description": "Founded in 1916 by Huliyappa Gowda, Hippla Estate has been passed down through five generations and is today managed by Nesara HD and Raghi Hippla. The estate is divided into three farms — Galigudde ('Windy Hills'), Kalavese, and Dinnekere — spread across the foothills of the Chandradrona range near the Bhadra River in Chikmagalur at around 950 metres. The forests of the nearby Bhadra Wildlife Sanctuary border the estate, bringing regular sightings of elephants, bears, gaur, and peacocks. In addition to coffee, the family grows areca nut and pepper.",
     "elevation_meters": 950,
-    "varieties": ["Arabica", "Robusta"],
-    "processing_methods": ["Natural", "Washed", "Honey"],
+    "varieties": [
+      "Arabica",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Natural",
+      "Washed",
+      "Honey"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1067,13 +1164,17 @@
     "address": "Megamalai (High Wavy Mountains), Theni District, Tamil Nadu",
     "pincode": "625562",
     "lat": 9.6333,
-    "lng": 77.4500,
+    "lng": 77.45,
     "url": null,
     "instagram": null,
     "description": "Howdia Estate is located in the Western Ghats of Tamil Nadu at the foot of the Megamalai range — a mountain system locally known as the 'High Wavy Mountains' for the cloud formations that roll across its peaks. At approximately 1,100 metres, this remote highland terrain offers a distinctive growing environment: high humidity, consistent cloud cover, and rich forest soils that support quality Arabica cultivation far from more well-known Indian coffee corridors.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1084,14 +1185,18 @@
     "city": "Anoor village",
     "address": "Anoor village, Hassan District, Karnataka",
     "pincode": "573201",
-    "lat": 13.0000,
-    "lng": 76.1000,
+    "lat": 13,
+    "lng": 76.1,
     "url": null,
     "instagram": null,
     "description": "Hoysala Estate, located in Anoor village, carries the name of the powerful Hoysala dynasty that reigned across this part of southern India from the 9th to 14th centuries. The historical connection lends the farm an added layer of identity, situated in a region where ancient temple architecture, fertile soil, and a long agricultural tradition coexist.",
     "elevation_meters": 900,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1103,13 +1208,18 @@
     "address": "Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "Nestled among the rolling hills of Chikmagalur, Kaivalya Estate occupies one of Karnataka's most celebrated coffee-growing landscapes. The estate's name — meaning 'liberation' or 'oneness' in Sanskrit — hints at a philosophy that values harmony with the land. Rich laterite soils, dense shade, and the region's reliable monsoon pattern provide the foundation for quality Arabica production.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1121,13 +1231,17 @@
     "address": "Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
-    "url": null,
+    "lng": 75.772,
+    "url": "https://www.sangameshwar.com",
     "instagram": null,
     "description": "Dating back to the early 1900s, Kalledevarapura Estate holds the distinction of being among the first farms visited by the specialty roasters who source from it. Its century-long presence in Chikmagalur means the estate has witnessed — and adapted to — the full arc of Indian coffee's transformation from commodity crop to specialty-grade origin.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1139,13 +1253,18 @@
     "address": "Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": "https://www.sangameshwar.com",
     "instagram": "https://www.instagram.com/sangameshwar_coffee",
     "description": "A 620-acre estate in Chikmagalur, Karadykan Estate is part of the Sangameshwar Coffee group — one of Karnataka's most established estate networks. The scale of the farm allows for diverse microclimate management, with different sections of the estate potentially offering distinct flavour expressions from the same core varieties.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1157,14 +1276,33 @@
     "address": "Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": "https://www.kerehaklu.com",
     "instagram": "https://www.instagram.com/kerehaklu/",
     "description": "Kerehaklu — roughly meaning 'shelter by the lake' in old Kannada — is a 275-acre biodiverse estate in Chikmagalur that has produced coffee since 1953, now run by father-son duo Ajoy and Pranoy Thipaiah. Ajoy brings decades of on-ground farming wisdom while Pranoy, a Biology graduate, leads post-harvest innovation — fermenting coffees using native microflora cultured from the farm's own soil, flora, and cherry pulp. Arabica varieties including Chandragiri, Selection 795, Selection 9, Yellow Bourbon, and small quantities of Liberica and Excelsa grow alongside avocado, jackfruit, and wild fig under a dense forest canopy at around 1,145 metres.",
     "elevation_meters": 1145,
-    "varieties": ["Chandragiri", "Selection 795", "Selection 9", "Selection 5B", "Selection 6", "Yellow Bourbon", "Liberica", "Excelsa", "Robusta CxR", "Robusta Peradeniya"],
-    "processing_methods": ["Washed", "Natural", "Honey", "Anaerobic", "Experimental Fermentation"],
-    "certifications": ["Organic"],
+    "varieties": [
+      "Chandragiri",
+      "Selection 795",
+      "Selection 9",
+      "Selection 5B",
+      "Selection 6",
+      "Yellow Bourbon",
+      "Liberica",
+      "Excelsa",
+      "Robusta CxR",
+      "Robusta Peradeniya"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Honey",
+      "Anaerobic",
+      "Experimental Fermentation"
+    ],
+    "certifications": [
+      "Organic"
+    ],
     "active": true
   },
   {
@@ -1175,13 +1313,18 @@
     "address": "Kollibyle village, Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "A fully women-run estate in Chikmagalur's Kollibyle village, Kolli Berri Estate has been in producer Pranathi's family since 1942. The farm stands as a testament to female leadership in Indian agriculture, with women managing every aspect of cultivation and processing. Set in the Western Ghats, the estate's decades-long relationship with the land has fostered a deep understanding of its microclimate and seasonal rhythms.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1198,8 +1341,13 @@
     "instagram": null,
     "description": "A 45-acre plantation in the Eastern Ghats of Koraput, Odisha, founded in 1996 and now run by mother-daughter duo Nirmala and Rajeshwari Reddy. What began as a post-retirement nature project for Nirmala's husband has grown into a thriving intercropped farm, with Arabica coffee growing alongside cinnamon, bay leaf, ginger, pepper, jamun, jackfruit, bananas, and over a dozen other fruits. The farm survived devastating losses from Cyclone Hudhud in 2014 and the passing of its founder, and has since been rebuilt by the two women into a showcase of resilience and sustainable agroforestry in one of India's most biodiverse tribal regions.",
     "elevation_meters": 900,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1210,14 +1358,21 @@
     "city": "Chikmagalur (Baba Budan Giri region)",
     "address": "Baba Budan Giri, Chikmagalur, Karnataka",
     "pincode": "577101",
-    "lat": 13.4000,
-    "lng": 75.5350,
+    "lat": 13.4,
+    "lng": 75.535,
     "url": null,
     "instagram": "https://www.instagram.com/krishnagiri.coffee/",
     "description": "Sprawling across 100 acres at 1,500 metres in the revered Baba Budan Giri hills — the legendary origin point of Indian coffee — Krishnagiri Estate is managed by Himakirthi and Karunya Gowda. The estate receives around 100 inches of rainfall annually, feeding its washing station, drying yards, and colour sorter, which together enable washed, honey, and natural processing. Selection 795 and Chandragiri Arabica varieties dominate the planting, grown in lush countryside overlooked by the very slopes where coffee first took root in India.",
     "elevation_meters": 1500,
-    "varieties": ["Selection 795", "Chandragiri"],
-    "processing_methods": ["Washed", "Honey", "Natural"],
+    "varieties": [
+      "Selection 795",
+      "Chandragiri"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1228,14 +1383,18 @@
     "city": "Yercaud",
     "address": "Yercaud, Shevaroy Hills, Salem District, Tamil Nadu",
     "pincode": "636601",
-    "lat": 11.7670,
+    "lat": 11.767,
     "lng": 78.1891,
     "url": null,
     "instagram": null,
     "description": "Set at 1,400 metres in the Shevaroy Hills near Yercaud, Kudiraipanjan Estate grows Arabica in one of Tamil Nadu's most appealing highland coffee zones. The Shevaroy range's cooler temperatures and reliable cloud cover slow cherry maturation, encouraging the development of sugars and acids that translate into lively, well-structured cups.",
     "elevation_meters": 1400,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1252,8 +1411,12 @@
     "instagram": null,
     "description": "Located in the Lower Palani Hills of Dindigul district, Loyola Estate occupies a quieter corner of Tamil Nadu's coffee landscape. The Palani range offers a distinctive terroir — drier than the Western Ghats in some pockets but still elevated enough to support Arabica — giving the estate's coffees a character shaped by the area's specific soil profile and seasonal patterns.",
     "elevation_meters": 900,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1265,13 +1428,18 @@
     "address": "Sahyadri range (Western Ghats), Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "Known by its abbreviated name M.S. Estate, Merthi Subbangudigy Estate sits in the rolling Sahyadri range of the Western Ghats in Chikmagalur. The Sahyadri — also called the 'Great Divider' — forms the backbone of India's southwestern mountain range, and the estate benefits from this rugged elevation, rich seasonal rainfall, and the dense forest corridors that characterise the area.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1282,14 +1450,22 @@
     "city": "North Coorg (Harangi backwaters)",
     "address": "Near Harangi Reservoir, North Coorg, Karnataka",
     "pincode": "571201",
-    "lat": 12.4800,
-    "lng": 75.9200,
+    "lat": 12.48,
+    "lng": 75.92,
     "url": null,
     "instagram": null,
     "description": "Mooleh Manay — Kannada for 'corner house' — is a North Coorg estate positioned along the Harangi backwaters, where the reservoir's proximity moderates temperature and humidity. The farm takes a data-driven approach to both cultivation and post-harvest, tracking soil health metrics and processing parameters to optimise quality. In addition to Arabica and Robusta coffee, the estate grows the rare Excelsa species and is involved in research on native Indian Coffea species.",
     "elevation_meters": 900,
-    "varieties": ["Arabica", "Robusta", "Excelsa"],
-    "processing_methods": ["Washed", "Natural", "Honey"],
+    "varieties": [
+      "Arabica",
+      "Robusta",
+      "Excelsa"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Honey"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1300,14 +1476,18 @@
     "city": "Yercaud",
     "address": "Shevaroy Hills, near Yercaud, Salem District, Tamil Nadu",
     "pincode": "636601",
-    "lat": 11.7670,
+    "lat": 11.767,
     "lng": 78.1891,
     "url": null,
     "instagram": null,
     "description": "Perched at 1,400 metres near Yercaud in the Shevaroy Hills, Nachammai Estate is part of Tamil Nadu's less-heralded but highly capable specialty coffee landscape. The Shevaroy range's cooler mornings, mineral-rich red soils, and manageable topography make it a reliable origin for bright, clean Arabica production.",
     "elevation_meters": 1400,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1318,14 +1498,19 @@
     "city": "Yercaud",
     "address": "Shevaroy Hills, Yercaud, Salem District, Tamil Nadu",
     "pincode": "636601",
-    "lat": 11.7670,
+    "lat": 11.767,
     "lng": 78.1891,
     "url": null,
     "instagram": null,
     "description": "Another estate in the MSP Coffee family portfolio — a group of seven farms unified by over five generations of dedication to the Shevaroy Hills — Orchardale Estate benefits from the collective's deep institutional knowledge of this Tamil Nadu highland region. The Rajes family's century-long involvement in local coffee growing informs every decision, from pruning to post-harvest processing.",
     "elevation_meters": 1350,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1342,8 +1527,12 @@
     "instagram": null,
     "description": "Established in the 1860s and now operated by its fifth generation, Ram Estate has one of the longer documented family histories in Indian coffee. Located at the crest of the Palani Hills in Kamanur village, the estate's multi-generational continuity has enabled a deep understanding of how this specific terroir behaves across different seasons and climatic cycles.",
     "elevation_meters": 1200,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1354,15 +1543,23 @@
     "city": "Chikmagalur (near Bababudangiri)",
     "address": "Near Bababudangiri, Chikmagalur, Karnataka",
     "pincode": "577101",
-    "lat": 13.4000,
-    "lng": 75.5350,
+    "lat": 13.4,
+    "lng": 75.535,
     "url": null,
     "instagram": null,
     "description": "Rainforest Alliance certified and situated near Bababudangiri — the hills where coffee first arrived in India centuries ago — Ratnagiri Estate combines historical resonance with forward-looking specialty practices. The estate is recognised for its environmental stewardship, combining traditional shade-grown methods with innovative post-harvest processing to produce microlots that consistently represent some of Karnataka's most distinctive flavour profiles.",
     "elevation_meters": 1200,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural", "Honey"],
-    "certifications": ["Rainforest Alliance"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Honey"
+    ],
+    "certifications": [
+      "Rainforest Alliance"
+    ],
     "active": true
   },
   {
@@ -1378,8 +1575,19 @@
     "instagram": "https://www.instagram.com/salawaraestate/",
     "description": "Founded in the late 1880s — Salawara meaning 'a string of blessings' — this 360-acre estate in Belur, Hassan has been cultivated by three generations of the YDN family. Located at 1,128 metres in the Western Ghats near Sakleshpur, the land is ringed by five man-made irrigation lakes and intercropped with pepper, areca nut, oranges, and silver oak. Arabica varieties Chandragiri and SLN 795 are produced here using washed, honey, and anaerobic methods. The estate received the Best Quality Bean Award from Ernesto Illy in 2018 and has since deepened its commitment to experimental specialty lots.",
     "elevation_meters": 1128,
-    "varieties": ["Chandragiri", "SLN 795", "SLN 7", "Arabica", "Robusta"],
-    "processing_methods": ["Washed", "Honey", "Natural", "Anaerobic"],
+    "varieties": [
+      "Chandragiri",
+      "SLN 795",
+      "SLN 7",
+      "Arabica",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey",
+      "Natural",
+      "Anaerobic"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1396,8 +1604,13 @@
     "instagram": null,
     "description": "Located in the Manjarabad region of the Western Ghats at around 1,160 metres elevation, Sampigehoney Estate draws its identity from its high-altitude setting in one of Karnataka's productive coffee corridors. The name Sampigehoney refers to the champa flower, a tree common to Western Ghats forests, lending the estate a connection to the native flora that shades and sustains its coffee plants.",
     "elevation_meters": 1160,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Honey"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Honey"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1408,14 +1621,18 @@
     "city": "Karnataka",
     "address": "Karnataka",
     "pincode": "577101",
-    "lat": 13.0000,
-    "lng": 76.0000,
+    "lat": 13,
+    "lng": 76,
     "url": null,
     "instagram": null,
     "description": "Established in 1878 and growing coffee at just over 1,050 metres, Sandalwood Estate carries one of the older founding dates among the farms in this network. Its name evokes Karnataka's famous sandalwood forests, a reminder of the rich native biodiversity that historically surrounded — and continues to support — coffee cultivation in the region.",
     "elevation_meters": 1050,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1427,13 +1644,17 @@
     "address": "Nelliyampathy Hills, Palakkad District, Kerala",
     "pincode": "678508",
     "lat": 10.5347,
-    "lng": 76.6960,
+    "lng": 76.696,
     "url": null,
     "instagram": null,
     "description": "Part of the Poabs estate group, Seethargundu Estate is located in Kerala's Nelliyampathy hills — a lesser-known but ecologically rich growing zone in Palakkad district at around 900 metres. Surrounded by dense shola forests and receiving generous rainfall from both monsoon seasons, the estate enjoys growing conditions suited to high-quality Arabica with a characteristically clean and nuanced profile.",
     "elevation_meters": 900,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1445,13 +1666,18 @@
     "address": "Rudra Giri mountains, Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "Shivagange Estate is set among the Rudra Giri mountains in Chikmagalur, a topographically dramatic sub-range within the Western Ghats. The rocky, elevated terrain of Rudra Giri — named for the Shaivite associations of the landscape — creates a microclimate with good drainage, high diurnal temperature variation, and natural forest shade, all of which contribute to the farm's Arabica quality.",
     "elevation_meters": 1200,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1462,14 +1688,19 @@
     "city": "Yercaud",
     "address": "Shevaroy Hills, Yercaud, Salem District, Tamil Nadu",
     "pincode": "636601",
-    "lat": 11.7670,
+    "lat": 11.767,
     "lng": 78.1891,
     "url": null,
     "instagram": null,
     "description": "Stanmore Estate sits at the centre of the Shevaroy Hills' optimal growing zone — a location prized within the MSP Coffee group for its gentle gradients, fertile red loam soils, and consistent seasonal rainfall. As one of seven estates in the family portfolio, Stanmore contributes to a collective knowledge base built by five generations of farming in this Tamil Nadu highland.",
     "elevation_meters": 1350,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1480,14 +1711,18 @@
     "city": "Chikmagalur (Baba Budangiri)",
     "address": "Baba Budangiri, Chikmagalur, Karnataka",
     "pincode": "577101",
-    "lat": 13.4000,
-    "lng": 75.5350,
+    "lat": 13.4,
+    "lng": 75.535,
     "url": null,
     "instagram": null,
     "description": "Thogarihunkal Estate is located in Chikmagalur on the storied slopes of Baba Budangiri — the hills credited with the origin of Indian coffee, where Baba Budan smuggled the first seven coffee seeds into India from Yemen centuries ago. Growing coffee on this historically charged terrain means each harvest is a continuation of an unbroken tradition that shaped an entire subcontinent's relationship with the beverage.",
     "elevation_meters": 1300,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1499,13 +1734,21 @@
     "address": "Joldal, Palya, Chikmagalur District, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "Born out of a passion for improving Indian coffee's post-harvest potential, Unakki Coffee Collective in Joldal, Palya, Chikmagalur, is a producer-focused group that centralises processing knowledge and infrastructure for participating growers. The collective's emphasis on elevating processing standards — through careful fermentation, sorting, and drying — reflects a broader movement within Indian specialty coffee to close the gap between farm quality and cup quality.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica", "Robusta"],
-    "processing_methods": ["Washed", "Natural", "Honey", "Anaerobic"],
+    "varieties": [
+      "Arabica",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural",
+      "Honey",
+      "Anaerobic"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1517,13 +1760,19 @@
     "address": "Durgadabetta slopes, Chikmagalur, Karnataka",
     "pincode": "577101",
     "lat": 13.3161,
-    "lng": 75.7720,
+    "lng": 75.772,
     "url": null,
     "instagram": null,
     "description": "Yelliemadaloo Estate runs along the banks of the stream it takes its name from, on the slopes of Durgadabetta in Chikmagalur. The stream-side location ensures natural moisture regulation through dry spells, while the adjacent hillside terrain provides elevation and drainage. Arabica and Robusta are grown in tandem here, alongside black pepper and areca nut — a classic Chikmagalur intercropping arrangement that diversifies income and supports soil health.",
     "elevation_meters": 1100,
-    "varieties": ["Arabica", "Robusta"],
-    "processing_methods": ["Washed", "Natural"],
+    "varieties": [
+      "Arabica",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1540,8 +1789,12 @@
     "instagram": null,
     "description": "Established in 1889 near Mullayanagiri — Karnataka's highest peak at 1,930 metres — Yelnoorkhan Estate stands at 1,616 metres, placing it among India's highest-altitude coffee farms. The thin air, cool temperatures, and slow cherry maturation at this elevation contribute to a dense, complex bean with pronounced acidity and body. Over 135 years of continuous cultivation in this demanding terrain speaks to the estate's resilience and the exceptional suitability of this microclimate for Arabica.",
     "elevation_meters": 1616,
-    "varieties": ["Arabica"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1558,8 +1811,19 @@
     "instagram": "https://www.instagram.com/riverdaleestate__yercaud_india/",
     "description": "Riverdale Estate is located in the Eastern Ghat mountains of Yercaud, Tamil Nadu — a hill range locally known as the Shevaroy Hills. At approximately 1,450 metres, the estate sits within a lush highland terrain where a natural freshwater stream meanders through the farm, lending it its name. A family-owned business since 1920, now in its third generation, Riverdale is one of India's most experimental specialty coffee producers — home to the country's first Gesha cultivation. The farm employs modern processing infrastructure including a cupping lab, African raised drying beds, and temperature-controlled storage.",
     "elevation_meters": 1450,
-    "varieties": ["Arabica", "SL9", "SL5B", "Gesha", "Yellow Bourbon"],
-    "processing_methods": ["Natural", "Washed", "Honey", "Carbonic Maceration"],
+    "varieties": [
+      "Arabica",
+      "SL9",
+      "SL5B",
+      "Gesha",
+      "Yellow Bourbon"
+    ],
+    "processing_methods": [
+      "Natural",
+      "Washed",
+      "Honey",
+      "Carbonic Maceration"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1570,14 +1834,21 @@
     "city": "Siruvani",
     "address": "Siruvani, Coimbatore District, Tamil Nadu",
     "pincode": "641114",
-    "lat": 10.9200,
-    "lng": 76.8500,
+    "lat": 10.92,
+    "lng": 76.85,
     "url": null,
     "instagram": null,
     "description": "Varadymullai Estate is located in the Western Ghats of Tamil Nadu near Siruvani, in the foothills of the Nilgiri Mountains. Established in 1945 under the Siruvani Group (incorporated as The Bhavani Tea & Produce Co. Ltd), the estate spans 2,000 acres of which close to 400 acres are dedicated to coffee cultivation. Tributaries of the Bhavani River run through the property, supporting a diverse range of crops including cardamom, tea, and pepper alongside coffee. Each step of the harvesting and curing process takes place on the estate, ensuring full traceability and quality control from cherry to green bean.",
     "elevation_meters": null,
-    "varieties": ["Arabica", "S9", "Chandragiri", "San Ramon"],
-    "processing_methods": ["Washed"],
+    "varieties": [
+      "Arabica",
+      "S9",
+      "Chandragiri",
+      "San Ramon"
+    ],
+    "processing_methods": [
+      "Washed"
+    ],
     "certifications": [],
     "active": true
   },
@@ -1594,9 +1865,14 @@
     "instagram": "https://www.instagram.com/sangameshwar_coffee",
     "description": "Biccode Estate is a 150-hectare coffee and pepper plantation situated near Belur, at the start of Karnataka's coffee belt in the Hassan District. Originally promoted by Englishman Clement Lake, whose family resided here from 1906 to 1935, the estate retains its colonial character through the historic Biccode bungalow — now restored and open as Biccode Woodside Heritage, a heritage homestay since 2023. Growing both Arabica and Robusta at elevations between 950 and 1,180 metres, the estate receives approximately 60 inches of rainfall annually. Tributaries of the Yagachi river system run nearby. Beyond coffee and pepper, the estate also cultivates avocados. Its award-winning natural-processed coffees have drawn attention to this often-overlooked corner of Karnataka's western fringe.",
     "elevation_meters": 1065,
-    "varieties": ["Arabica", "Robusta"],
-    "processing_methods": ["Natural"],
+    "varieties": [
+      "Arabica",
+      "Robusta"
+    ],
+    "processing_methods": [
+      "Natural"
+    ],
     "certifications": [],
     "active": true
-}
+  }
 ]
