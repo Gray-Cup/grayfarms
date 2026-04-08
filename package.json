@@ -1,5 +1,5 @@
 {
-  "name": "farms-directory",
+  "name": "grayfarms",
   "private": true,
   "scripts": {
     "build": "turbo build",

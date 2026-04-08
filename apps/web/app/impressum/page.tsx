@@ -55,7 +55,7 @@ export default function ImpressumPage() {
             All farm listings are community-submitted and provided in good faith. Gray Farms does not
             verify the accuracy of individual listings and accepts no liability for incorrect or
             outdated information. If you spot an error, please open an issue on{' '}
-            <a href="https://github.com/Gray-Cup/farms-directory" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Gray-Cup/grayfarms" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>.
           </p>
@@ -76,7 +76,7 @@ export default function ImpressumPage() {
           <h3>Source code</h3>
           <p>
             The directory is fully open source.{' '}
-            <a href="https://github.com/Gray-Cup/farms-directory" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Gray-Cup/grayfarms" target="_blank" rel="noopener noreferrer">
               View it on GitHub →
             </a>
           </p>

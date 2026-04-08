@@ -43,7 +43,7 @@ export default function AboutPage() {
           <p>
             This is not a marketplace. There are no listings fees, no commissions, and no
             paywalls. The data lives in plain JSON files on{' '}
-            <a href="https://github.com/Gray-Cup/farms-directory" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Gray-Cup/grayfarms" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
             {' '}— fully open and auditable by anyone.
