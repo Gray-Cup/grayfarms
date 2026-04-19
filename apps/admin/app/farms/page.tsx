@@ -30,10 +30,17 @@ export default async function FarmsPage() {
 
   return (
     <>
-      <h2>Farms</h2>
-      <p style={{ fontSize: 'var(--text-small)', color: 'var(--color-muted)', marginBottom: '1.5rem' }}>
-        {coffee.length} coffee · {tea.length} tea
-      </p>
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
+        <div>
+          <h2 style={{ marginBottom: '0.25rem' }}>Farms</h2>
+          <p style={{ fontSize: 'var(--text-small)', color: 'var(--color-muted)' }}>
+            {coffee.length} coffee · {tea.length} tea
+          </p>
+        </div>
+        <Link href="/farms/new" className="btn btn-primary" style={{ fontSize: 'var(--text-small)' }}>
+          + Add farm
+        </Link>
+      </div>
 
       <h3 style={{ fontSize: 'var(--text-small)', fontWeight: 600, marginBottom: '0.5rem' }}>Coffee</h3>
       <FarmTable farms={coffee} type="coffee" />

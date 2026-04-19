@@ -156,6 +156,24 @@ export async function updateFarm(
   })
 }
 
+export async function addFarm(
+  farmType: 'coffee' | 'tea',
+  farm: CoffeeFarmData | TeaFarmData
+): Promise<void> {
+  const { octokit, dataFile, fileData, farms } = await getFileAndFarms(farmType)
+
+  farms.push(farm)
+  const updatedJson = JSON.stringify(farms, null, 2) + '\n'
+
+  await octokit.repos.createOrUpdateFileContents({
+    owner: OWNER, repo: REPO, path: dataFile,
+    message: `Add ${farmType} farm: ${farm.name} (${farm.city}, ${farm.state})`,
+    content: Buffer.from(updatedJson).toString('base64'),
+    sha: fileData.sha,
+    branch: BASE_BRANCH,
+  })
+}
+
 export async function deleteFarm(
   farmType: 'coffee' | 'tea',
   farmId: string,
