@@ -1874,5 +1874,29 @@
     ],
     "certifications": [],
     "active": true
+  },
+  {
+    "id": "7aa4ff92-6814-4d51-8924-74d7a62d1661",
+    "name": "Diamond Estate",
+    "state": "Karnataka",
+    "city": "Chikkamagalur",
+    "address": "Haliyur",
+    "pincode": null,
+    "lat": 13.262095,
+    "lng": 75.623817,
+    "url": null,
+    "instagram": null,
+    "description": "Set across an expansive 300-acre estate, this coffee farm combines scale with focused craftsmanship. Over 100 acres are dedicated to premium Arabica cultivation, while the remaining 200 acres nurture robust Robusta plants, creating a diverse and resilient growing environment. At present, the farm specializes exclusively in 100% Arabica production, carefully processing its harvest through both washed and natural methods.",
+    "elevation_meters": null,
+    "processing_methods": [
+      "Washed",
+      "Natural"
+    ],
+    "certifications": [],
+    "active": true,
+    "varieties": [
+      "Arabica",
+      "Robusta"
+    ]
   }
 ]
