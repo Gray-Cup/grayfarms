@@ -70,32 +70,6 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
     }
   }, [])
 
-  // Handle infinite scroll to load more listings
-  useEffect(() => {
-    const listElement = resultsListRef.current
-    if (!listElement) return
-
-    const handleScroll = () => {
-      // Check if user has scrolled near the bottom
-      const scrollTop = listElement.scrollTop
-      const scrollHeight = listElement.scrollHeight
-      const clientHeight = listElement.clientHeight
-      const threshold = 300 // Load more when 300px from bottom
-
-      if (scrollHeight - (scrollTop + clientHeight) < threshold) {
-        setDisplayCount(prev => Math.min(prev + 10, filtered.length))
-      }
-    }
-
-    listElement.addEventListener('scroll', handleScroll)
-    return () => listElement.removeEventListener('scroll', handleScroll)
-  }, [filtered.length])
-
-  // Reset displayCount when filters or tab changes
-  useEffect(() => {
-    setDisplayCount(10)
-  }, [tab, search, selectedStates, selectedTags])
-
   const farms = tab === 'coffee' 
     ? shuffledCoffee 
     : tab === 'tea' 
@@ -154,6 +128,32 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
       return aStarts - bStarts
     })
   }, [farms, search, selectedStates, selectedTags])
+
+  // Handle infinite scroll to load more listings
+  useEffect(() => {
+    const listElement = resultsListRef.current
+    if (!listElement) return
+
+    const handleScroll = () => {
+      // Check if user has scrolled near the bottom
+      const scrollTop = listElement.scrollTop
+      const scrollHeight = listElement.scrollHeight
+      const clientHeight = listElement.clientHeight
+      const threshold = 300 // Load more when 300px from bottom
+
+      if (scrollHeight - (scrollTop + clientHeight) < threshold) {
+        setDisplayCount(prev => Math.min(prev + 10, filtered.length))
+      }
+    }
+
+    listElement.addEventListener('scroll', handleScroll)
+    return () => listElement.removeEventListener('scroll', handleScroll)
+  }, [filtered.length])
+
+  // Reset displayCount when filters or tab changes
+  useEffect(() => {
+    setDisplayCount(10)
+  }, [tab, search, selectedStates, selectedTags])
 
   const toggleState = useCallback((state: string) => {
     setSelectedStates(prev => prev.includes(state) ? prev.filter(s => s !== state) : [...prev, state])
