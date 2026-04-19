@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import type { CoffeeFarmData, TeaFarmData } from '@farms/db'
 import { SlidersHorizontalIcon } from 'lucide-react'
@@ -15,7 +15,7 @@ import { toSlug } from '@/lib/slug'
 
 const FarmMap = dynamic(() => import('./FarmMap'), { ssr: false })
 
-type FarmType = 'coffee' | 'tea'
+type FarmType = 'coffee' | 'tea' | 'all'
 type AnyFarm = CoffeeFarmData | TeaFarmData
 
 interface Props {
@@ -37,9 +37,19 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
   const [shuffledCoffee] = useState(() => shuffle(coffeeFarms))
   const [shuffledTea] = useState(() => shuffle(teaFarms))
 
+  const getInitialTab = (): FarmType => {
+    if (typeof window === 'undefined') return 'all'
+    const params = new URLSearchParams(window.location.search)
+    const typeParam = params.get('type')
+    if (typeParam === 'coffee' || typeParam === 'tea' || typeParam === 'all') {
+      return typeParam
+    }
+    return 'all'
+  }
+
   const initialTab: FarmType = initialFarmId
     ? (coffeeFarms.some(f => f.id === initialFarmId) ? 'coffee' : 'tea')
-    : 'coffee'
+    : getInitialTab()
 
   const [tab, setTab] = useState<FarmType>(initialTab)
   const [search, setSearch] = useState('')
@@ -49,7 +59,20 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
   const [filterOpen, setFilterOpen] = useState(false)
   const [submitOpen, setSubmitOpen] = useState(false)
 
-  const farms = tab === 'coffee' ? shuffledCoffee : shuffledTea
+  // Update tab from URL when component mounts
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const typeParam = params.get('type')
+    if (typeParam === 'coffee' || typeParam === 'tea' || typeParam === 'all') {
+      setTab(typeParam)
+    }
+  }, [])
+
+  const farms = tab === 'coffee' 
+    ? shuffledCoffee 
+    : tab === 'tea' 
+      ? shuffledTea 
+      : [...shuffledCoffee, ...shuffledTea]
 
   const allFarms: AnyFarm[] = useMemo(
     () => [...shuffledCoffee, ...shuffledTea],
@@ -66,7 +89,11 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
     const tags = new Set<string>()
     if (tab === 'coffee') {
       shuffledCoffee.forEach(f => { f.varieties.forEach(v => tags.add(v)); f.certifications.forEach(c => tags.add(c)) })
+    } else if (tab === 'tea') {
+      shuffledTea.forEach(f => { f.tea_types.forEach(t => tags.add(t)); f.certifications.forEach(c => tags.add(c)) })
     } else {
+      // 'all' tab - include both coffee varieties and tea types
+      shuffledCoffee.forEach(f => { f.varieties.forEach(v => tags.add(v)); f.certifications.forEach(c => tags.add(c)) })
       shuffledTea.forEach(f => { f.tea_types.forEach(t => tags.add(t)); f.certifications.forEach(c => tags.add(c)) })
     }
     return [...tags].sort()
@@ -116,7 +143,7 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
     setSelectedStates([])
     setSelectedTags([])
     setSelectedId(null)
-    window.history.pushState({}, '', '/')
+    window.history.pushState({}, '', next === 'all' ? '/?type=all' : `/?type=${next}`)
   }
 
   const handleSelect = (id: string | null) => {
@@ -215,6 +242,7 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
 
               <div className="sidebar-top">
                 <div className="tabs">
+                  <button className={`tab-btn${tab === 'all' ? ' active' : ''}`} onClick={() => handleTabChange('all')}>All</button>
                   <button className={`tab-btn${tab === 'coffee' ? ' active' : ''}`} onClick={() => handleTabChange('coffee')}>Coffee</button>
                   <button className={`tab-btn${tab === 'tea' ? ' active' : ''}`} onClick={() => handleTabChange('tea')}>Tea</button>
                 </div>
@@ -275,7 +303,7 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
                           <div className="flex flex-col gap-2">
                             <div className="flex items-center justify-between">
                               <span className="text-sm font-semibold">
-                                {tab === 'coffee' ? 'Varieties & Certifications' : 'Tea Types & Certifications'}
+                                {tab === 'coffee' ? 'Varieties & Certifications' : tab === 'tea' ? 'Tea Types & Certifications' : 'Varieties, Tea Types & Certifications'}
                               </span>
                               <button
                                 className="text-xs text-muted-foreground hover:text-foreground"
@@ -334,7 +362,8 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
               <div className="results-list-wrap">
                 <div className="results-list">
                   {filtered.map(farm => {
-                    const tags = tab === 'coffee'
+                    const isCoffee = 'varieties' in farm
+                    const tags = isCoffee
                       ? [...(farm as CoffeeFarmData).varieties, ...(farm as CoffeeFarmData).certifications]
                       : [...(farm as TeaFarmData).tea_types, ...(farm as TeaFarmData).certifications]
                     return (

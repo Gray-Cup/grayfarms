@@ -775,6 +775,11 @@ html.dark .theme-toggle-btn:hover { background: #161616; color: #ececec; }
 /* ── Farm type tabs ──────────────────────────────────────── */
 .tabs {
   display: flex;
+  overflow-x: auto;
+  gap: 0;
+}
+.tabs::-webkit-scrollbar {
+  height: 0;
 }
 .tab-btn {
   padding: 0.4rem 0.5rem;
@@ -786,6 +791,8 @@ html.dark .theme-toggle-btn:hover { background: #161616; color: #ececec; }
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   font-family: inherit;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .tab-btn.active {
   color: var(--app-color-primary);
