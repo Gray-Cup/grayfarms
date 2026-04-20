@@ -217,7 +217,7 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
                 <div className="detail-type">{selectedFarmType === 'coffee' ? 'Coffee Farm' : 'Tea Estate'}</div>
                 <h2 className="detail-name">{selectedFarm.name}</h2>
                 {selectedFarmType === 'coffee' && (selectedFarm as CoffeeFarmData).label && (
-                  <span className="badge badge-blue" style={{ display: 'inline-block', marginBottom: '0.5rem' }}>
+                  <span className="badge badge-blue" style={{ display: 'inline-block', width: 'fit-content', marginBottom: '0.5rem' }}>
                     {(selectedFarm as CoffeeFarmData).label}
                   </span>
                 )}
@@ -410,7 +410,7 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
                       >
                         <h3>{farm.name}</h3>
                         {(farm as CoffeeFarmData).label && (
-                          <span className="badge badge-blue" style={{ display: 'inline-block', marginBottom: '0.25rem' }}>
+                          <span className="badge badge-blue" style={{ display: 'inline-block', width: 'fit-content', marginBottom: '0.25rem' }}>
                             {(farm as CoffeeFarmData).label}
                           </span>
                         )}
