@@ -1915,7 +1915,8 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
   },
   {
     "id": "assam-dima-kelelo",
@@ -1933,7 +1934,8 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
   },
   {
     "id": "assam-dima-changpijang",
@@ -1951,7 +1953,8 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
   },
   {
     "id": "assam-dima-nomjang-001",
@@ -1969,7 +1972,8 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
   },
   {
     "id": "assam-dima-lassang-001",
@@ -1987,7 +1991,8 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
   },
   {
     "id": "assam-dima-plongkai-001",
@@ -2005,7 +2010,8 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
   },
   {
     "id": "assam-dima-pleikul-001",
@@ -2023,7 +2029,8 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
   },
   {
     "id": "assam-dima-toulpui-001",
@@ -2041,7 +2048,8 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
   },
   {
     "id": "assam-dima-laisong-001",
@@ -2059,6 +2067,27 @@
     "processing_methods": ["Washed", "Natural"],
     "certifications": [],
     "active": true,
-    "varieties": ["Arabica (SLN 9)"]
-  }
+    "varieties": ["Arabica (SLN 9)"],
+    "label": "Collective Farming Village"
+  },
+  {
+  "id": "arunachal-tirap-namsang-001",
+  "name": "Namsang Coffee Village",
+  "state": "Arunachal Pradesh",
+  "city": "Tirap",
+  "address": "Namsang, Tirap district, Arunachal Pradesh, India",
+  "pincode": null,
+  "lat": 27.1152098,
+  "lng": 95.4128991,
+  "url": "",
+  "instagram": null,
+  "description": "A low-elevation coffee-growing village in Tirap district, primarily focused on Robusta cultivation with emerging interest in improving processing quality.",
+  "elevation_meters": 300,
+  "processing_methods": ["Natural"],
+  "certifications": [],
+  "active": true,
+  "varieties": ["Robusta (CxR)"],
+  "label": "Collective Farming Village"
+}
+
 ]
