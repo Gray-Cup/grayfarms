@@ -1038,5 +1038,41 @@
     "processing_methods": ["Orthodox", "First Flush", "Second Flush"],
     "certifications": ["GI Certified Darjeeling Tea"],
     "active": true
-  }
+  },
+  {
+  "id": "assam-tinsukia-powai",
+  "name": "Powai Tea Estate",
+  "state": "Assam",
+  "city": "Tinsukia",
+  "address": "Powai Tea Estate, Tinsukia district, Assam, India",
+  "pincode": 786187,
+  "lat": 27.3481614,
+  "lng": 95.647714,
+  "url": null,
+  "instagram": null,
+  "description": "Powai Tea Estate is located in the Tinsukia district of Upper Assam, part of the Brahmaputra valley tea belt known for strong, malty Assam teas. The estate was previously owned by TATA Tea (bought in 1983) and was later transferred to Amalgamated plantations in 2007 as part of plantation restructuring. It continues to operate as a major CTC tea producing estate.",
+  "elevation_meters": 145,
+  "tea_types": ["Black", "CTC"],
+  "processing_methods": ["CTC"],
+  "certifications": [],
+  "active": true
+},
+{
+  "id": "assam-tinsukia-dehing",
+  "name": "Dehing Tea Estate",
+  "state": "Assam",
+  "city": "Tinsukia",
+  "address": "P.O. Galai, Margherita region, Tinsukia district, Assam, India",
+  "pincode": "786181",
+  "lat": 27.1534865,
+  "lng": 95.2422635,
+  "url": null,
+  "instagram": null,
+  "description": "Dehing Tea Estate is located in the easternmost tea-growing belt of Upper Assam near the Margherita region in Tinsukia district. Established in 1901, the estate is named after the Buri Dehing River and has historically been part of the  group. Spread across approximately 650 hectares with nearly 490 hectares under tea cultivation, the estate produces primarily CTC teas known for their strong, bright liquor. It lies within the high-rainfall Brahmaputra valley ecosystem, making it ideal for consistent high-volume tea production.",
+  "elevation_meters": 139,
+  "tea_types": ["Black", "CTC"],
+  "processing_methods": ["CTC"],
+  "certifications": [],
+  "active": true
+}
 ]

@@ -87,6 +87,7 @@ export interface CoffeeFarmData {
   processing_methods: string[]
   certifications: string[]
   active: boolean
+  label?: string
 }
 
 export interface TeaFarmData {

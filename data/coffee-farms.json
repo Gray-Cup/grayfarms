@@ -1898,5 +1898,29 @@
       "Arabica",
       "Robusta"
     ]
-  }
+  },
+  {
+  "id": "assam-dima-hasao-collaborative-001",
+  "name": "Dima Hasao",
+  "state": "Assam",
+  "city": "Dima Hasao",
+  "address": "Dima Hasao district, Assam, India",
+  "pincode": 788107,
+  "lat": 25.2700,
+  "lng": 93.0200,
+  "url": "",
+  "instagram": null,
+  "description": "A community-driven coffee initiative representing multiple villages across Dima Hasao including N Leikul, Kelelo, Changpijang, Nomjang, Lassang, P Longkai, P Leikul, Toulpui, and Laisong. The collective is supported by local farmers such as Thomjalal, Nejhang, and Manga, reflecting a growing coffee ecosystem in Northeast India focused on smallholder cultivation and shared processing practices.",
+  "elevation_meters": 1000,
+  "processing_methods": [
+    "Washed",
+    "Natural"
+  ],
+  "certifications": [],
+  "active": true,
+  "label": "Collective Farmer Village",
+  "varieties": [
+    "Arabica (SLN 9)"
+  ]
+}
 ]

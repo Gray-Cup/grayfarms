@@ -216,6 +216,11 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
               <div className="detail-panel">
                 <div className="detail-type">{selectedFarmType === 'coffee' ? 'Coffee Farm' : 'Tea Estate'}</div>
                 <h2 className="detail-name">{selectedFarm.name}</h2>
+                {selectedFarmType === 'coffee' && (selectedFarm as CoffeeFarmData).label && (
+                  <span className="badge badge-blue" style={{ display: 'inline-block', marginBottom: '0.5rem' }}>
+                    {(selectedFarm as CoffeeFarmData).label}
+                  </span>
+                )}
                 <div className="detail-location">
                   {selectedFarm.city}, {selectedFarm.state}
                   {selectedFarm.elevation_meters && <span className="detail-elev"> · {selectedFarm.elevation_meters}m</span>}
@@ -404,6 +409,11 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
                         onClick={() => handleSelect(farm.id)}
                       >
                         <h3>{farm.name}</h3>
+                        {(farm as CoffeeFarmData).label && (
+                          <span className="badge badge-blue" style={{ display: 'inline-block', marginBottom: '0.25rem' }}>
+                            {(farm as CoffeeFarmData).label}
+                          </span>
+                        )}
                         <div className="meta">
                           <span>{farm.city}, {farm.state}</span>
                           {farm.elevation_meters && <span>{farm.elevation_meters}m elev.</span>}
