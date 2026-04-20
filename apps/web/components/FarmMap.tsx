@@ -27,21 +27,23 @@ const TEA_COLOR    = '#15803d' // green
 const isCoffee = (farm: AnyFarm) => 'varieties' in farm
 
 const defStyle = (farm: AnyFarm): L.CircleMarkerOptions => ({
-  radius: 7,
+  radius: 5,
   color: '#fff',
   weight: 1.5,
   fillColor: isCoffee(farm) ? COFFEE_COLOR : TEA_COLOR,
   fillOpacity: 0.85,
   className: 'farm-dot',
+  pane: 'farmDotsPane',
 })
 
 const hiStyle = (farm: AnyFarm): L.CircleMarkerOptions => ({
-  radius: 11,
+  radius: 8,
   color: '#fff',
   weight: 2.5,
   fillColor: isCoffee(farm) ? COFFEE_COLOR : TEA_COLOR,
   fillOpacity: 1,
   className: 'farm-dot farm-dot--selected',
+  pane: 'farmDotsPane',
 })
 
 const CYCLOSM_URL = 'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png'
@@ -58,6 +60,7 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect, onB
   const markersRef = useRef<Map<string, { marker: L.CircleMarker; farm: AnyFarm }>>(new Map())
   const prevSelectedRef = useRef<string | null>(null)
   const overlayRef = useRef<L.Polygon | null>(null)
+  const userInteractedRef = useRef(false)
   const [mapReady, setMapReady] = useState(false)
 
   // Initialise the Leaflet map once
@@ -79,13 +82,15 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect, onB
       }).setView([20, 80], 6)
 
       mapRef.current = map
+      map.createPane('farmDotsPane').style.zIndex = '450'
       setMapReady(true)
 
       const emitBounds = () => {
-        if (!onBoundsChange) return
+        if (!userInteractedRef.current || !onBoundsChange) return
         const b = map.getBounds()
         onBoundsChange({ north: b.getNorth(), south: b.getSouth(), east: b.getEast(), west: b.getWest() })
       }
+      map.on('movestart', () => { userInteractedRef.current = true })
       map.on('moveend', emitBounds)
       map.on('zoomend', emitBounds)
 
@@ -171,8 +176,8 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect, onB
         existing.set(farm.id, { marker, farm })
       })
 
-      // Only fit bounds when nothing is selected — selecting a farm will flyTo instead
-      if (!selectedId) {
+      // Only fit bounds on initial load before the user has panned/zoomed
+      if (!selectedId && !userInteractedRef.current) {
         const coords: [number, number][] = []
         existing.forEach(({ marker }, id) => {
           if (nextIds.has(id)) coords.push([marker.getLatLng().lat, marker.getLatLng().lng])
@@ -215,8 +220,8 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect, onB
         if (lat != null && lng != null) {
           map.setView([lat, lng], 13, { animate: false })
         }
-      } else {
-        // Nothing selected — zoom back out to show all visible markers
+      } else if (!userInteractedRef.current) {
+        // Nothing selected and user hasn't manually navigated — zoom to show all markers
         const coords: [number, number][] = []
         markersRef.current.forEach(({ marker }) => {
           coords.push([marker.getLatLng().lat, marker.getLatLng().lng])

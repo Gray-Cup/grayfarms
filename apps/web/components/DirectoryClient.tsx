@@ -72,15 +72,14 @@ export default function DirectoryClient({ coffeeFarms, teaFarms, initialFarmId }
     }
   }, [])
 
-  const farms = tab === 'coffee' 
-    ? shuffledCoffee 
-    : tab === 'tea' 
-      ? shuffledTea 
-      : [...shuffledCoffee, ...shuffledTea]
-
   const allFarms: AnyFarm[] = useMemo(
     () => [...shuffledCoffee, ...shuffledTea],
     [shuffledCoffee, shuffledTea]
+  )
+
+  const farms = useMemo(
+    () => tab === 'coffee' ? shuffledCoffee : tab === 'tea' ? shuffledTea : allFarms,
+    [tab, shuffledCoffee, shuffledTea, allFarms]
   )
   const selectedFarm = selectedId ? allFarms.find(f => f.id === selectedId) ?? null : null
 
