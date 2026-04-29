@@ -100,12 +100,13 @@ export default function FarmMap({ farms, selectedId, selectedFarm, onSelect, onB
         .then(r => r.json())
         .then(india => {
           const world: [number, number][] = [[-90, -180], [-90, 180], [90, 180], [90, -180]]
+          const geometry = india.type === 'FeatureCollection' ? india.features[0].geometry : india.geometry
           const polys =
-            india.geometry.type === 'Polygon'
-              ? [india.geometry.coordinates]
-              : india.geometry.coordinates
+            geometry.type === 'Polygon'
+              ? [geometry.coordinates]
+              : geometry.coordinates
           const poly = L.polygon(
-            [world, ...polys.map((p: number[][][]) => p[0].map(c => [c[1], c[0]] as [number, number]))],
+            [world, ...polys.map((p: number[][][]) => p[0].map((c: number[]) => [c[1], c[0]] as [number, number]))],
             { color: 'none', fillColor: '#ddd', fillOpacity: 0.5, interactive: false }
           ).addTo(map)
           overlayRef.current = poly
